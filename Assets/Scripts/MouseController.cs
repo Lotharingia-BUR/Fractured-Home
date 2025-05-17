@@ -24,12 +24,16 @@ public class MouseController : MonoBehaviour
         {
             Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
         }
+        else if (Input.GetKey(KeyCode.Mouse0)) {
+            Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto);  // Set to default cursor placeholder
+        }
         else
         {
             Cursor.SetCursor(defaultCursor, hotspot, CursorMode.Auto);  // Set to default cursor placeholder
 
         }
     }
+
 }
 
 
