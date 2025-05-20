@@ -4,11 +4,12 @@ public class MouseController : MonoBehaviour
 {
     public Texture2D defaultCursor;    // cursor placeholder (default)
     public Texture2D interactiveCursor;  // Hand cursor placeholder for interactables
+    public Texture2D clickedCursor; //clicked cursor state 
     private Vector2 hotspot = Vector2.zero; // The "click point" for the cursor (top-left)
 
     void Start()
     {
-        // Set the default cursor (red circle) when the game starts
+        // Set the default cursor when the game starts
         Cursor.visible = true; // Ensure system cursor is visible
         Cursor.SetCursor(defaultCursor, hotspot, CursorMode.Auto); // Set the default cursor (red circle)
     }
@@ -23,13 +24,25 @@ public class MouseController : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Interactable"))
         {
             Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
+
+
+            //detect mouse when clicked
+            if (Input.GetMouseButtonDown(0)) //left mouse button click
+            {
+            //change colour of the interactable object to white
+            hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+              
+                
+            }
         }
         else
         {
             Cursor.SetCursor(defaultCursor, hotspot, CursorMode.Auto);  // Set to default cursor placeholder
 
         }
+
+        }
     }
-}
+
 
 
