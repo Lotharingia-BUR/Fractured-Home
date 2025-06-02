@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110299380}
   - component: {fileID: 110299382}
+ main
   - component: {fileID: 110299381}
   m_Layer: 0
   m_Name: Rug
