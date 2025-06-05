@@ -39,6 +39,9 @@ public class DialogueManager : Singleton<DialogueManager>
         mainText.text = story.Continue();
 
         Debug.Log("Story set to " + inkStory.name);
+
+        //HACK: To be removed when pause manager is created
+        gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -50,7 +53,7 @@ public class DialogueManager : Singleton<DialogueManager>
         if (story.canContinue)
         {
             //Play next line of dialogue on interaction
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 LoadNextDialogue();
             }
@@ -81,7 +84,7 @@ public class DialogueManager : Singleton<DialogueManager>
             }
 
             //Select dialogue option on interaction
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 story.ChooseChoiceIndex(_selectedChoice);
                 LoadNextDialogue();
@@ -90,7 +93,7 @@ public class DialogueManager : Singleton<DialogueManager>
         else
         {
             //If there is no more dialogue, resume game on interaction
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 ResetStory();
             }
@@ -106,6 +109,8 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         story.ResetState();
         story = null;
+        //HACK: To be removed when pause manager is created
+        gameObject.SetActive(false);
 
         //TODO: Add Pause manager
         //PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
