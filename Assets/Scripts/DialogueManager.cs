@@ -38,10 +38,9 @@ public class DialogueManager : Singleton<DialogueManager>
         story = new Story(inkStory.text);
         mainText.text = story.Continue();
 
-        Debug.Log("Story set to " + inkStory.name);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Dialogue);
 
-        //HACK: To be removed when pause manager is created
-        gameObject.SetActive(true);
+        Debug.Log("Story set to " + inkStory.name);
     }
 
     // Update is called once per frame
@@ -109,10 +108,7 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         story.ResetState();
         story = null;
-        //HACK: To be removed when pause manager is created
-        gameObject.SetActive(false);
 
-        //TODO: Add Pause manager
-        //PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
     }
 }
