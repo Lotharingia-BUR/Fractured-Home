@@ -17,23 +17,19 @@ MonoBehaviour:
   description: Point & click template scene with the kid and cat characters
   preview: {fileID: 3292656662067778937}
   dependencies:
-  - dependency: {fileID: 23800000, guid: 17789e288812555418b3e8b9c69b3287, type: 2}
-    instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: df33ea9f0b39ab149b5636b4a8549dd8, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: e4f97225bcfb64760a1c81f460837f01, type: 3}
-    instantiationMode: 1
-  - dependency: {fileID: 2100000, guid: cb3c95098f1fcbf4983b3c62aaaac7b8, type: 2}
-    instantiationMode: 0
   - dependency: {fileID: 2100000, guid: 5924f57b6caa9e74fbb891faaccf33f7, type: 2}
-    instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: 77949c416e71a104cb8aa723d0bdfc70, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 5007479862896111013, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: fd10cd0d51e4ca14eaff779eba1aa5ad, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 4e3b6faf03c3e1c41b9e62476bc291d8, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 1193872144135016039, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 2100000, guid: f942559cf788077448454018484ad0a9, type: 2}
+  - dependency: {fileID: 2100000, guid: edd96c4bf1ca17f4289ab7811d104d31, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: d89f979362580ac438c422f18bbc4b4b, type: 3}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
