@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=29e2f85599a79d9489987c524228c727&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" class="header" style="flex-grow: 1; background-color: rgba(86, 86, 86, 0); background-image: url(&quot;project://database/Assets/UI%20Assets/MMbackground.png?fileID=2800000&amp;guid=808c5ddae5c801048b6caddd483a1e16&amp;type=3#MMbackground&quot;);">
+        <ui:Label text="Fractured Home" name="header1" class="header" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Assets/Font/IMFellDWPicaSC-Regular.ttf?fileID=12800000&amp;guid=f65ce1e5d06b65444b3d2bf5f9db417a&amp;type=3#IMFellDWPicaSC-Regular&quot;); margin-top: 86px; margin-right: 43px; margin-bottom: -4px; margin-left: 43px; padding-top: -20px;" />
+        <ui:VisualElement name="ButtonContainer" style="flex-grow: 1; width: 590px; align-items: center; align-self: center; margin-top: 9px; margin-bottom: 0; top: auto; height: 700px;">
+            <ui:Button text="START " name="StartBtn" class="button main-menu-btn" />
+            <ui:Button text="SAVES" name="SaveBtn" class="button main-menu-btn" />
+            <ui:Button text="SETTINGS" name="SettingsBtn" class="button main-menu-btn" />
+            <ui:Button text="CREDITS" name="CreditsBtn" class="button main-menu-btn" />
+            <ui:Button text="QUIT GAME" name="ExitBtn" class="button main-menu-btn" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
