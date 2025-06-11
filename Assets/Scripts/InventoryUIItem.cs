@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InventoryUIItem : MonoBehaviour
 {
     public InventoryItem item;
+    public GameObject worldItemPrefab;
 
     private Image _image;
 
@@ -21,7 +22,7 @@ public class InventoryUIItem : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        item.onDestroyEvent += () => Destroy(gameObject);
+
     }
 
     // Update is called once per frame
@@ -32,9 +33,8 @@ public class InventoryUIItem : MonoBehaviour
 
     public void SpawnWorldItem()
     {
-        //TODO: Create InventoryWorldItem class
-
-        // Instantiate correct InventoryWorldItem
+        InventoryWorldItem worldItem = Instantiate(worldItemPrefab).GetComponent<InventoryWorldItem>();
+        worldItem.Initialize(this, item);
 
         _image.enabled = false;
     }
