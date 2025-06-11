@@ -1,18 +1,19 @@
+using System.Collections;
 using Pathfinding;
 using UnityEngine;
 
 public class PointAndClickCharacterController : MonoBehaviour
 {
-
+    private Coroutine _movementOverrideCoroutine = null;
 
     private ABPath _path;
 
-    private Seeker _navAgent;
+    private Seeker _seeker;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _navAgent = GetComponent<Seeker>();
+        _seeker = GetComponent<Seeker>();
     }
 
     // Update is called once per frame
@@ -20,11 +21,36 @@ public class PointAndClickCharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 targetPos = new Vector3(mouseWorldPos.x, mouseWorldPos.y, transform.position.z);
-
-            _navAgent.StartPath(transform.position, targetPos, OnPathComplete);
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            SetDestination(mouseWorldPos);
         }
+    }
+
+    public void SetDestination(Vector2 destination)
+    {
+        if (_movementOverrideCoroutine != null) { return; }
+
+        Vector3 targetPos = new Vector3(destination.x, destination.y, transform.position.z);
+
+        _seeker.StartPath(transform.position, targetPos, OnPathComplete);
+    }
+
+    public void SetDestination(PointAndClickObject destinationObject)
+    {
+        SetDestination(destinationObject.objectDestinationNode.position);
+
+        _movementOverrideCoroutine = StartCoroutine(MoveToObjectCoroutine(destinationObject));
+    }
+
+    private IEnumerator MoveToObjectCoroutine(PointAndClickObject pncObject)
+    {
+        yield return new WaitUntil(() => _path != null);
+
+        yield return new WaitUntil(() => (_path.endPoint - transform.position).magnitude <= 0.2);
+
+        pncObject.SendMessage("ObjectReached");
+
+        _movementOverrideCoroutine = null;
     }
 
     private void OnPathComplete(Path p)
