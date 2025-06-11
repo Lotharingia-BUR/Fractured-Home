@@ -1,14 +1,18 @@
 using UnityEngine;
 
-public class MouseController : MonoBehaviour
+public class MouseController : Manager<MouseController>
 {
     public Texture2D defaultCursor;    // cursor placeholder (default)
     public Texture2D interactiveCursor;  // Hand cursor placeholder for interactables
     public Texture2D clickedCursor; //clicked cursor state 
     private Vector2 hotspot = Vector2.zero; // The "click point" for the cursor (top-left)
 
-    void Start()
+    public InventoryWorldItem draggedItem = null;
+
+    protected override void Initialize()
     {
+        base.Initialize();
+
         // Set the default cursor when the game starts
         Cursor.visible = true; // Ensure system cursor is visible
         Cursor.SetCursor(defaultCursor, hotspot, CursorMode.Auto); // Set the default cursor (red circle)
@@ -16,12 +20,14 @@ public class MouseController : MonoBehaviour
 
     void Update()
     {
+        // TODO: Refactor this to clean up the nested if statements
+
         // Raycast to check if we are over an interactive object (2D raycast)
         Vector3 mousePos = Input.mousePosition;
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
 
-        // If the raycast hits something tagged "Interactable", change the cursor to the hand
-        if (hit.collider != null && hit.collider.CompareTag("Interactable"))
+        // If the raycast hits something with the Interactable component, change the cursor to the hand
+        if (hit.collider?.GetComponent<Interactable>() != null)
         {
             Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
 
@@ -29,10 +35,18 @@ public class MouseController : MonoBehaviour
             //detect mouse when clicked
             if (Input.GetMouseButtonDown(0)) //left mouse button click
             {
-            //change colour of the interactable object to white
-            hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-              
-                
+                //TODO: This doesn't do anything since the color is already white
+                //change colour of the interactable object to white
+                hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+
+            }
+
+            PointAndClickObject pcObj = hit.collider.GetComponent<PointAndClickObject>();
+            if (draggedItem != null && pcObj != null && Input.GetKeyUp(KeyCode.Mouse0) && draggedItem.item.id == pcObj.itemKey.id)
+            {
+                draggedItem.Release(true);
+                pcObj.Unlock();
             }
         }
         else
@@ -41,8 +55,17 @@ public class MouseController : MonoBehaviour
 
         }
 
+        if (draggedItem != null)
+        {
+            draggedItem.transform.position = new(mousePos.x, mousePos.y);
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                draggedItem.Release(false);
+            }
         }
     }
+}
 
 
 

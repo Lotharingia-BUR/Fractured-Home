@@ -35,7 +35,7 @@ public class InventoryWorldItem : MonoBehaviour
 
     }
 
-    public void OnReleased(bool itemUsed)
+    public void Release(bool itemUsed)
     {
         if (itemUsed)
         {

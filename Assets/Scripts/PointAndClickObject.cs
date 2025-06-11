@@ -34,13 +34,11 @@ public class PointAndClickObject : Interactable
 
     private void ObjectReached()
     {
-        if (InventoryManager.Instance.HasItem(itemKey))
-        {
-            onUnlockedEvent.Invoke();
-        }
-        else
-        {
-            base.OnClicked();
-        }
+        base.OnClicked();
+    }
+
+    public void Unlock()
+    {
+        onUnlockedEvent.Invoke();
     }
 }
