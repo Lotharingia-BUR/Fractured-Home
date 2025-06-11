@@ -10,4 +10,6 @@ public class InventoryItem : ScriptableObject
 
     //The sprite to display in the inventory UI
     public Sprite sprite;
+
+    public event System.Action onDestroyEvent;
 }

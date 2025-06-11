@@ -297,6 +297,11 @@ MonoBehaviour:
   pointAndClickCharacters:
   - {fileID: 1627812830}
   - {fileID: 1486331714}
+  hasLockedDialogue: 0
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &91242593
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +493,11 @@ MonoBehaviour:
   pointAndClickCharacters:
   - {fileID: 1627812830}
   - {fileID: 1486331714}
+  hasLockedDialogue: 0
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &160139174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,8 +1596,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1130352128}
-  - component: {fileID: 1130352130}
   - component: {fileID: 1130352129}
+  - component: {fileID: 1130352130}
   m_Layer: 0
   m_Name: Door (unlocked)
   m_TagString: Interactable
@@ -1666,22 +1676,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130352127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc18864b230d3c40a8c437741ccb7d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1103606053}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: SetStory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4900000, guid: 64f9719ac8d643949ada51630f6bde7f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  objectDestinationNode: {fileID: 1236865659}
+  pointAndClickCharacters:
+  - {fileID: 1627812830}
+  - {fileID: 1486331714}
+  hasLockedDialogue: 1
+  itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 7204275885570257473}
         m_TargetAssemblyTypeName: SceneManagerComponent, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Interior 1
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1153281552

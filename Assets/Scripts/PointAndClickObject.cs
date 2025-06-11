@@ -7,6 +7,11 @@ public class PointAndClickObject : Interactable
 
     public PointAndClickCharacterController[] pointAndClickCharacters;
 
+    public bool hasLockedDialogue = false;
+
+    public InventoryItem itemKey;
+    public UnityEvent onUnlockedEvent;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +34,13 @@ public class PointAndClickObject : Interactable
 
     private void ObjectReached()
     {
-        base.OnClicked();
+        if (InventoryManager.Instance.HasItem(itemKey))
+        {
+            onUnlockedEvent.Invoke();
+        }
+        else
+        {
+            base.OnClicked();
+        }
     }
 }
