@@ -19,6 +19,7 @@ public class DialogueVariables : ScriptableSingleton<DialogueVariables>
     }
 }
 
+//Class from this answer on the Unity Forums: https://discussions.unity.com/t/solved-how-to-serialize-dictionary-with-unity-serialization-system/71474/4
 [System.Serializable]
 public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
