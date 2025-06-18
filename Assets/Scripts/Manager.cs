@@ -6,6 +6,6 @@ public abstract class Manager<T> : Singleton<T> where T : Manager<T>
     {
         base.Initialize();
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.root.gameObject);
     }
 }
