@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: OutsideKey
   m_EditorClassIdentifier: 
   id: out_key
-  sprite: {fileID: 21300000, guid: 37c969e126ac44a49b382e8082c8f6db, type: 3}
+  sprite: {fileID: 21300000, guid: 14355d1f54675aa409cfac65521ecbed, type: 3}

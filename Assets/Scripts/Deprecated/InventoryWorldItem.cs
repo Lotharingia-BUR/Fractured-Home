@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Obsolete]
 public class InventoryWorldItem : MonoBehaviour
 {
     public InventoryItem item;
@@ -43,7 +44,7 @@ public class InventoryWorldItem : MonoBehaviour
         }
         else
         {
-            linkedUIItem.ResetState();
+            linkedUIItem.Release(true);
         }
 
         Destroy(gameObject);

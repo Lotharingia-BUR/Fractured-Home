@@ -7,7 +7,7 @@ public class MouseController : Manager<MouseController>
     public Texture2D clickedCursor; //clicked cursor state 
     private Vector2 hotspot = Vector2.zero; // The "click point" for the cursor (top-left)
 
-    public InventoryWorldItem draggedItem = null;
+    public InventoryUIItem draggedItem = null;
 
     protected override void Initialize()
     {
@@ -43,7 +43,7 @@ public class MouseController : Manager<MouseController>
             }
 
             PointAndClickObject pcObj = hit.collider.GetComponent<PointAndClickObject>();
-            if (draggedItem != null && pcObj != null && Input.GetKeyUp(KeyCode.Mouse0) && draggedItem.item.id == pcObj.itemKey.id)
+            if (draggedItem != null && pcObj != null && Input.GetKeyUp(KeyCode.Mouse0) && draggedItem.item.id == pcObj.itemKey?.id)
             {
                 draggedItem.Release(true);
                 pcObj.Unlock();
@@ -57,11 +57,12 @@ public class MouseController : Manager<MouseController>
 
         if (draggedItem != null)
         {
-            draggedItem.transform.position = new(mousePos.x, mousePos.y);
+            draggedItem.transform.position = mousePos;
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 draggedItem.Release(false);
+                draggedItem = null;
             }
         }
     }

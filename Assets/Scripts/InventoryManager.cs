@@ -7,9 +7,15 @@ public class InventoryManager : Manager<InventoryManager>
 {
     public List<InventoryItem> inventory { get; private set; }
 
+    public InventoryUIItem[] inventorySlots;
+
+    public event System.Action inventoryChanged;
+
     protected override void Initialize()
     {
         base.Initialize();
+
+        inventoryChanged += UpdateItemSlots;
 
         inventory = new List<InventoryItem>();
     }
@@ -20,11 +26,35 @@ public class InventoryManager : Manager<InventoryManager>
 
     }
 
+    private void UpdateItemSlots()
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (i < inventory.Count)
+            {
+                inventorySlots[i].item = inventory[i];
+                inventorySlots[i].SetVisibility(true);
+            }
+            else
+            {
+                inventorySlots[i].item = null;
+                inventorySlots[i].SetVisibility(false);
+            }
+        }
+    }
+
+    private void OnInventoryChanged()
+    {
+        inventoryChanged?.Invoke();
+    }
+
     public void AddItem(InventoryItem inItem)
     {
         inventory.Add(inItem);
 
         Debug.Log(inItem.id + " added to inventory");
+
+        OnInventoryChanged();
     }
 
     public void RemoveItem(string itemID)
@@ -37,6 +67,8 @@ public class InventoryManager : Manager<InventoryManager>
                 return;
             }
         }
+
+        OnInventoryChanged();
     }
 
     public void RemoveItem(InventoryItem inItem)
@@ -49,6 +81,8 @@ public class InventoryManager : Manager<InventoryManager>
                 return;
             }
         }
+
+        OnInventoryChanged();
     }
 
     public bool HasItem(string itemID)
