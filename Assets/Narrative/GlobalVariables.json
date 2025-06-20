@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalBools:
-    keys:
-    - testBool
-    values: 01
+    keys: []
+    values: 
   globalInts:
     keys:
     - testInt
