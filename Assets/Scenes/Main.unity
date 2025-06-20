@@ -1486,7 +1486,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760668167}
-  - component: {fileID: 760668168}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -1512,22 +1511,6 @@ Transform:
   - {fileID: 1687051954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &760668168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760668166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 510e01273921c1f459442a10d0b6837e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: cbfe8e36ed9a9024c9450c808f4b9bd1, type: 3}
-  interactiveCursor: {fileID: 2800000, guid: 5350ba33802a2d045a6c27be4b614507, type: 3}
-  clickedCursor: {fileID: 2800000, guid: 4cd581c597c81614481d7ea97b1df1bf, type: 3}
-  draggedItem: {fileID: 0}
 --- !u!1 &784533964
 GameObject:
   m_ObjectHideFlags: 0
