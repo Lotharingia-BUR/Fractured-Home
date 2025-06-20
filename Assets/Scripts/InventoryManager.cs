@@ -7,7 +7,9 @@ public class InventoryManager : Manager<InventoryManager>
 {
     public List<InventoryItem> inventory { get; private set; }
 
-    public InventoryUIItem[] inventorySlots;
+    public GameObject uiInventory;
+
+    private List<InventoryUIItem> inventorySlots;
 
     public event System.Action inventoryChanged;
 
@@ -18,6 +20,14 @@ public class InventoryManager : Manager<InventoryManager>
         inventoryChanged += UpdateItemSlots;
 
         inventory = new List<InventoryItem>();
+
+        inventorySlots = new List<InventoryUIItem>();
+        foreach (Transform child in uiInventory.transform)
+        {
+            if (child.GetChild(0)?.GetComponent<InventoryUIItem>() == null) { continue; }
+
+            inventorySlots.Add(child.GetChild(0).GetComponent<InventoryUIItem>());
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +38,7 @@ public class InventoryManager : Manager<InventoryManager>
 
     private void UpdateItemSlots()
     {
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; i < inventorySlots.Count; i++)
         {
             if (i < inventory.Count)
             {
