@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class PointAndClickObject : Interactable
 {
     public Transform objectDestinationNode;
@@ -11,6 +15,9 @@ public class PointAndClickObject : Interactable
 
     public InventoryItem itemKey;
     public UnityEvent onUnlockedEvent;
+    public UnityEvent onInteractUnlockedEvent;
+
+    private bool _isUnlocked = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,11 +41,37 @@ public class PointAndClickObject : Interactable
 
     private void ObjectReached()
     {
-        base.OnClicked();
+        if (_isUnlocked)
+        {
+            if (onInteractUnlockedEvent == null)
+            {
+                Debug.LogWarning($"No unlocked interaction event has been assigned to {gameObject.name}");
+            }
+            else
+            {
+                onInteractUnlockedEvent.Invoke();
+            }
+        }
+        else
+        {
+            base.OnClicked();
+        }
     }
 
     public void Unlock()
     {
         onUnlockedEvent.Invoke();
+    }
+}
+
+
+[CustomEditor(typeof(PointAndClickObject)), CanEditMultipleObjects]
+public class PointAndClickObjectEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+
     }
 }
