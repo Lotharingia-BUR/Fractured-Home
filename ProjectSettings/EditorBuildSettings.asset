@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interior 1.unity
     guid: 12601dffa78c2dd428fd8d0ca429b920
+  - enabled: 1
+    path: Assets/Scenes/Dylans Room.unity
+    guid: 0f8f17e215d994944bdf0eff2150e9db
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
