@@ -235,7 +235,6 @@ MonoBehaviour:
         m_CallState: 2
   objectDestinationNode: {fileID: 1858662211}
   pointAndClickCharacters:
-  - {fileID: 1689002052}
   - {fileID: 1528247557}
   hasLockedDialogue: 0
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
@@ -4481,7 +4480,7 @@ MonoBehaviour:
   debugRoof: 1
   manualDebugFloorRoof: 0
   showSearchTree: 0
-  unwalkableNodeDebugSize: 0.3
+  unwalkableNodeDebugSize: 0.5
   logPathResults: 1
   maxNearestNodeDistance: 100
   scanOnStartup: 1
@@ -4501,7 +4500,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -5609,17 +5608,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
---- !u!114 &1689002052 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3686855968152699554, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
-  m_PrefabInstance: {fileID: 1689002051}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6af13c7dd0b13f64994ac4b44da3455f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1698279695
 GameObject:
   m_ObjectHideFlags: 0
