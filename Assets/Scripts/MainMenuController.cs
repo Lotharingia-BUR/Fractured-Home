@@ -6,7 +6,9 @@ using UnityEngine.UIElements;
 //grabbing the buttons from the ui document to be recognized for click events
 public class MainMenuController : MonoBehaviour
 {
+
     private Button _startBtn;
+    private AudioSource _audioSource;
 
 
     //   private Button _saveBtn;
@@ -16,6 +18,7 @@ public class MainMenuController : MonoBehaviour
 
     private void Awake()
     {
+        
 
        // _startBtn = _doc.rootVisualElement.Q<Button>("StartGameBtn");
        var uiDocument = GetComponent<UIDocument>();
@@ -28,7 +31,8 @@ public class MainMenuController : MonoBehaviour
 
     private void StartBtnOnClicked()
     {
-        SceneManager.LoadScene("Main");
+        
+        SceneManager.LoadScene("Main"); //load main scene
     }
 }
         //_saveBtn = _doc.rootVisualElement.Q<Button>("SaveBtn");
