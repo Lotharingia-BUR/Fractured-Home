@@ -528,7 +528,7 @@ MonoBehaviour:
           m_StringArgument: Attic
           m_BoolArgument: 1
         m_CallState: 1
-  objectDestinationNode: {fileID: 651571108}
+  objectDestinationNode: {fileID: 1799978528}
   pointAndClickCharacters:
   - {fileID: 1528247557}
   hasLockedDialogue: 0
