@@ -244,6 +244,90 @@ MonoBehaviour:
   onInteractUnlockedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &27350298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 380485922088189498, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_Name
+      value: Scene Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 906244892217629235, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0002052
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6511227
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.525634
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213317068683065489, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: clickedCursor
+      value: 
+      objectReference: {fileID: -6527069497977903076, guid: 108dbe9f2d173074393421a323152769, type: 3}
+    - target: {fileID: 6213317068683065489, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: defaultCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: d071db94305ad1d468886a7111d902b0, type: 3}
+    - target: {fileID: 6213317068683065489, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+      propertyPath: interactiveCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: b2257440a43c1c5478f8e924d916ff5b, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+--- !u!114 &27350299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5283216787701079315, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
+  m_PrefabInstance: {fileID: 27350298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0bff3cd0ed48a43ba53548878b9ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &38986380
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,20 +516,21 @@ MonoBehaviour:
   onInteractedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99527406}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 27350299}
+        m_TargetAssemblyTypeName: SceneManagerComponent, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 842400040}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: APPLE
+          m_StringArgument: Attic
           m_BoolArgument: 1
         m_CallState: 1
   objectDestinationNode: {fileID: 651571108}
-  pointAndClickCharacters: []
+  pointAndClickCharacters:
+  - {fileID: 1528247557}
   hasLockedDialogue: 0
   itemKey: {fileID: 0}
   onUnlockedEvent:
@@ -5003,6 +5088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dlyan
       objectReference: {fileID: 0}
+    - target: {fileID: 1654040394803445779, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7529,3 +7618,4 @@ SceneRoots:
   - {fileID: 7993385}
   - {fileID: 99527406}
   - {fileID: 1824772736}
+  - {fileID: 27350298}
