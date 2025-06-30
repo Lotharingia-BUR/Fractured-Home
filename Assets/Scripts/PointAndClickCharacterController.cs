@@ -1,6 +1,7 @@
 using System.Collections;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PointAndClickCharacterController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PointAndClickCharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetDestination(mouseWorldPos);

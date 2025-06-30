@@ -65,9 +65,14 @@ public class PointAndClickObject : Interactable
 }
 
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(PointAndClickObject)), CanEditMultipleObjects]
 public class PointAndClickObjectEditor : Editor
 {
+    private SerializedProperty _interactLockedEvent;
+    private SerializedProperty _interactUnlockedEvent;
+    private SerializedProperty _unlockedEvent;
+
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -75,3 +80,4 @@ public class PointAndClickObjectEditor : Editor
 
     }
 }
+#endif
