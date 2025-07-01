@@ -10,18 +10,27 @@ using UnityEditor;
 public class BoundedFollowCamera : MonoBehaviour
 {
     public Transform target;
-    public Bounds bounds;
+    public GameObject background;
     public Vector2 offset;
-    public Camera followCamera;
     public float smoothing;
 
+    private Camera followCamera;
     private Vector3 _viewportHalfSize;
+    private Bounds bounds;
 
     private Vector3 _shakeOffset;
 
     // Start is called before the first frame update
     void Start()
     {
+        followCamera = GetComponent<Camera>();
+
+        bounds.center = background.transform.position;
+        Vector3 bgExtents = background.GetComponent<MeshFilter>().mesh.bounds.extents;
+        Vector3 bgScale = background.transform.lossyScale;
+        Vector3 scaledExtents = new(bgExtents.x * bgScale.x, bgExtents.y * bgScale.y, bgExtents.z * bgScale.z);
+        bounds.extents = Quaternion.Inverse(background.transform.rotation) * scaledExtents;
+
         _viewportHalfSize = new(followCamera.aspect * followCamera.orthographicSize, followCamera.orthographicSize);
 
         bounds.extents -= _viewportHalfSize;
@@ -34,6 +43,7 @@ public class BoundedFollowCamera : MonoBehaviour
 
         smoothedPosition.x = Mathf.Clamp(smoothedPosition.x, bounds.min.x, bounds.max.x);
         smoothedPosition.y = Mathf.Clamp(smoothedPosition.y, bounds.min.y, bounds.max.y);
+        smoothedPosition.z = transform.position.z;
 
         transform.position = smoothedPosition;
     }
@@ -61,49 +71,3 @@ public class BoundedFollowCamera : MonoBehaviour
         Gizmos.DrawWireCube(bounds.center, bounds.extents * 2);
     }
 }
-
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(BoundedFollowCamera))]
-public class BoundedFollowCameraEditor : Editor
-{
-    private BoxBoundsHandle _boundsHandle = new BoxBoundsHandle();
-
-    private bool _editBoundsMode = false;
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        if (!_editBoundsMode && EditorGUILayout.LinkButton("Edit Camera Bounds"))
-        {
-            _editBoundsMode = true;
-        }
-        else if (_editBoundsMode && EditorGUILayout.LinkButton("Stop Editing Bounds"))
-        {
-            _editBoundsMode = false;
-        }
-    }
-
-    void OnSceneGUI()
-    {
-        if (!_editBoundsMode) { return; }
-
-        BoundedFollowCamera obj = (BoundedFollowCamera)target;
-
-        _boundsHandle.SetColor(Color.blue);
-        _boundsHandle.center = obj.bounds.center;
-        _boundsHandle.size = obj.bounds.size;
-
-        EditorGUI.BeginChangeCheck();
-        _boundsHandle.DrawHandle();
-        if (EditorGUI.EndChangeCheck())
-        {
-            Undo.RecordObject(obj, "Change Camera Bounds");
-
-            obj.bounds.center = _boundsHandle.center;
-            obj.bounds.extents = _boundsHandle.size / 2;
-        }
-    }
-}
-#endif
