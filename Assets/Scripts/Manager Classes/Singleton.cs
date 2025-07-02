@@ -13,7 +13,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
             {
                 //Set the instance
                 _instance = FindAnyObjectByType<T>();
-                _instance.Initialize();
+                _instance?.Initialize();
             }
             return _instance;
         }
@@ -33,7 +33,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
         }
         else if (_instance != this)
         {
-            Debug.LogError($"Cannot have multiple {this.GetType().Name} objects in one scene.");
+            Debug.LogWarning($"Cannot have multiple {this.GetType().Name} objects in one scene. Deleting newest object");
             Destroy(this);
         }
     }

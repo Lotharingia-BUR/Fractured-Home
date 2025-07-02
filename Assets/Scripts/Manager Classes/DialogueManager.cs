@@ -46,8 +46,7 @@ public class DialogueManager : Singleton<DialogueManager>
     // Update is called once per frame
     void Update()
     {
-        //TODO: Add Pause manager
-        //if (PauseModeManager.Instance.pauseMode != PauseMode.Dialogue) { return; }
+        if (PauseModeManager.Instance.pauseMode != PauseMode.Dialogue) { return; }
 
         if (story.canContinue)
         {

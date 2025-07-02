@@ -37,7 +37,8 @@ public class MouseController : Manager<MouseController>
             {
                 //TODO: This doesn't do anything since the color is already white
                 //change colour of the interactable object to white
-                hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                //Also throws and error like 50% of the time cause we're mixing SpriteRenderers and Meshes
+                //hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
 
             }

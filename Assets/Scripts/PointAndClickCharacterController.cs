@@ -38,7 +38,14 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(PointAndClickObject destinationObject)
     {
-        SetDestination(destinationObject.objectDestinationNode.position);
+        if (destinationObject.objectDestinationNode != null)
+        {
+            SetDestination(destinationObject.objectDestinationNode.position);
+        }
+        else
+        {
+            SetDestination(destinationObject.transform.position);
+        }
 
         _movementOverrideCoroutine = StartCoroutine(MoveToObjectCoroutine(destinationObject));
     }

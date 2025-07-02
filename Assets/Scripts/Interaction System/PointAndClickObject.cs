@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Unity.VisualScripting;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -7,11 +9,12 @@ using UnityEditor;
 
 public class PointAndClickObject : Interactable
 {
+    [Tooltip("Unique ID for this object, for purposes of accessed saved data from the manager")]
+    public string id;
+
     public Transform objectDestinationNode;
 
-    public PointAndClickCharacterController[] pointAndClickCharacters;
-
-    public bool hasLockedDialogue = false;
+    private PointAndClickCharacterController _pointAndClickCharacter;
 
     public InventoryItem itemKey;
     public UnityEvent onUnlockedEvent;
@@ -19,10 +22,24 @@ public class PointAndClickObject : Interactable
 
     private bool _isUnlocked = false;
 
+    void Awake()
+    {
+        PointAndClickObjectState savedState = PersistentObjectStateManager.Instance.GetObjectState(id);
+        if (savedState.isCollected)
+        {
+            Destroy(gameObject);
+        }
+        _isUnlocked = savedState.isUnlocked;
+        if (_isUnlocked)
+        {
+            onUnlockedEvent.Invoke();
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        _pointAndClickCharacter = FindFirstObjectByType<PointAndClickCharacterController>();
     }
 
     // Update is called once per frame
@@ -31,12 +48,15 @@ public class PointAndClickObject : Interactable
 
     }
 
+    public void DestroyPNCObject(PointAndClickObject pncObject)
+    {
+        PersistentObjectStateManager.Instance.SaveObjectState(pncObject.id, true, pncObject._isUnlocked);
+        Destroy(pncObject.gameObject);
+    }
+
     protected override void OnClicked()
     {
-        foreach (var pc in pointAndClickCharacters)
-        {
-            pc.SetDestination(this);
-        }
+        _pointAndClickCharacter.SetDestination(this);
     }
 
     private void ObjectReached()
@@ -60,6 +80,7 @@ public class PointAndClickObject : Interactable
 
     public void Unlock()
     {
+        PersistentObjectStateManager.Instance.SaveObjectState(id, false, true);
         onUnlockedEvent.Invoke();
     }
 }
