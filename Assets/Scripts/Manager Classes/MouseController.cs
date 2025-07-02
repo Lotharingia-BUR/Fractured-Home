@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Apple.ReplayKit;
 
 public class MouseController : Manager<MouseController>
 {
@@ -29,7 +30,7 @@ public class MouseController : Manager<MouseController>
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
 
         // If the raycast hits something with the Interactable component, change the cursor to the hand
-        if (hit.collider?.GetComponent<Interactable>() != null)
+        if ((hit.collider?.gameObject != null && hit.collider.gameObject.tag == "Interactable") || hit.collider?.GetComponent<Interactable>() != null)
         {
             Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
 
