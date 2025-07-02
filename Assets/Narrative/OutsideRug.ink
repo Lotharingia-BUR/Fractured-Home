@@ -1,3 +1,0 @@
-There's something under the rug...
-It's a key!
-    -> END
