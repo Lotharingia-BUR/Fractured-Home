@@ -25,15 +25,27 @@ public class BoundedFollowCamera : MonoBehaviour
     {
         followCamera = GetComponent<Camera>();
 
+        CalculateBounds();
+
+        _viewportHalfSize = new(followCamera.aspect * followCamera.orthographicSize, followCamera.orthographicSize);
+
+        bounds.extents -= _viewportHalfSize;
+
+        Vector3 desiredPosition = target.position + new Vector3(offset.x, offset.y, transform.position.z);
+        desiredPosition.x = Mathf.Clamp(desiredPosition.x, bounds.min.x, bounds.max.x);
+        desiredPosition.y = Mathf.Clamp(desiredPosition.y, bounds.min.y, bounds.max.y);
+        desiredPosition.z = transform.position.z;
+
+        transform.position = desiredPosition;
+    }
+
+    private void CalculateBounds()
+    {
         bounds.center = background.transform.position;
         Vector3 bgExtents = background.GetComponent<MeshFilter>().mesh.bounds.extents;
         Vector3 bgScale = background.transform.lossyScale;
         Vector3 scaledExtents = new(bgExtents.x * bgScale.x, bgExtents.y * bgScale.y, bgExtents.z * bgScale.z);
         bounds.extents = Quaternion.Inverse(background.transform.rotation) * scaledExtents;
-
-        _viewportHalfSize = new(followCamera.aspect * followCamera.orthographicSize, followCamera.orthographicSize);
-
-        bounds.extents -= _viewportHalfSize;
     }
 
     private void LateUpdate()
