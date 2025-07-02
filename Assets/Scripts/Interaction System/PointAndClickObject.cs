@@ -9,9 +9,6 @@ using UnityEditor;
 
 public class PointAndClickObject : Interactable
 {
-    [Tooltip("Unique ID for this object, for purposes of accessed saved data from the manager")]
-    public string id;
-
     public Transform objectDestinationNode;
 
     private PointAndClickCharacterController _pointAndClickCharacter;
@@ -24,7 +21,7 @@ public class PointAndClickObject : Interactable
 
     void Awake()
     {
-        PointAndClickObjectState savedState = PersistentObjectStateManager.Instance.GetObjectState(id);
+        PointAndClickObjectState savedState = PersistentObjectStateManager.Instance.GetObjectState(gameObject.name);
         if (savedState.isCollected)
         {
             Destroy(gameObject);
@@ -50,7 +47,7 @@ public class PointAndClickObject : Interactable
 
     public void DestroyPNCObject(PointAndClickObject pncObject)
     {
-        PersistentObjectStateManager.Instance.SaveObjectState(pncObject.id, true, pncObject._isUnlocked);
+        PersistentObjectStateManager.Instance.SaveObjectState(pncObject.gameObject.name, true, pncObject._isUnlocked);
         Destroy(pncObject.gameObject);
     }
 
@@ -80,7 +77,7 @@ public class PointAndClickObject : Interactable
 
     public void Unlock()
     {
-        PersistentObjectStateManager.Instance.SaveObjectState(id, false, true);
+        PersistentObjectStateManager.Instance.SaveObjectState(gameObject.name, false, true);
         onUnlockedEvent.Invoke();
     }
 }

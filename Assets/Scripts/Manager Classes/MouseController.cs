@@ -5,13 +5,15 @@ public class MouseController : Manager<MouseController>
     public Texture2D defaultCursor;    // cursor placeholder (default)
     public Texture2D interactiveCursor;  // Hand cursor placeholder for interactables
     public Texture2D clickedCursor; //clicked cursor state 
-    private Vector2 hotspot = Vector2.zero; // The "click point" for the cursor (top-left)
+    private Vector2 hotspot; // The "click point" for the cursor
 
     public InventoryUIItem draggedItem = null;
 
     protected override void Initialize()
     {
         base.Initialize();
+
+        hotspot = new(defaultCursor.width / 2, defaultCursor.height / 2);
 
         // Set the default cursor when the game starts
         Cursor.visible = true; // Ensure system cursor is visible
