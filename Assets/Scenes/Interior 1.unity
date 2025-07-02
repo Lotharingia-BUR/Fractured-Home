@@ -1912,6 +1912,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1592176849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &462622661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462622662}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &462622662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462622661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1335629359}
+  - {fileID: 2045589513}
+  - {fileID: 24985520}
+  - {fileID: 1962065720}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &464918422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2793,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 904756859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &760668166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,6 +2844,8 @@ MonoBehaviour:
   interactiveCursor: {fileID: 2800000, guid: 5350ba33802a2d045a6c27be4b614507, type: 3}
   clickedCursor: {fileID: 2800000, guid: 4cd581c597c81614481d7ea97b1df1bf, type: 3}
   draggedItem: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &766256666
 GameObject:
   m_ObjectHideFlags: 0

@@ -444,7 +444,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  id: outside_door
   objectDestinationNode: {fileID: 1452270229}
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
   onUnlockedEvent:
@@ -621,7 +620,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  id: outside_rug
   objectDestinationNode: {fileID: 619972527}
   itemKey: {fileID: 0}
   onUnlockedEvent:
@@ -2065,7 +2063,6 @@ MonoBehaviour:
           m_StringArgument: Interior 1
           m_BoolArgument: 0
         m_CallState: 2
-  id: 
   objectDestinationNode: {fileID: 1452270229}
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
   onUnlockedEvent:
@@ -4222,7 +4219,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  id: outside_key
   objectDestinationNode: {fileID: 619972527}
   itemKey: {fileID: 0}
   onUnlockedEvent:
