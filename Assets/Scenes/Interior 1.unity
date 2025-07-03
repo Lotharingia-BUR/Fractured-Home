@@ -1244,6 +1244,7 @@ Transform:
   m_Children:
   - {fileID: 1528247557}
   - {fileID: 842400040}
+  - {fileID: 1335629359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218402892
@@ -1762,6 +1763,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1592176849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &360702817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360702818}
+  m_Layer: 0
+  m_Name: Clock Node Dlyan
+  m_TagString: Point Node
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360702818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360702817}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27, y: 0.9000001, z: -0.01999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904756859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366381295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,7 +2196,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 760668167}
-  - {fileID: 1335629359}
   - {fileID: 2045589513}
   - {fileID: 24985520}
   - {fileID: 1962065720}
@@ -2847,6 +2878,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660118902}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &665778774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 665778775}
+  m_Layer: 0
+  m_Name: Clock Node
+  m_TagString: Point Node
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &665778775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665778774}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27, y: 1, z: -0.01999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1592176849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681405621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,6 +3629,7 @@ Transform:
   - {fileID: 1441130715}
   - {fileID: 134825847}
   - {fileID: 128562916}
+  - {fileID: 360702818}
   - {fileID: 1674453968}
   - {fileID: 432578339}
   - {fileID: 2120105519}
@@ -4176,6 +4239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1138304041}
   - component: {fileID: 1138304042}
+  - component: {fileID: 1138304043}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Interactable
@@ -4254,6 +4318,41 @@ PolygonCollider2D:
       - {x: 0.5792042, y: -2.8587058}
       - {x: 1.3370161, y: -2.8271065}
   m_UseDelaunayMesh: 0
+--- !u!114 &1138304043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138304040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteractedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1213341939}
+        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+        m_MethodName: SetDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  objectDestinationNode: {fileID: 360702818}
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1138494013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,7 +5441,7 @@ Transform:
   m_Children:
   - {fileID: 904756859}
   - {fileID: 1592176849}
-  m_Father: {fileID: 462622662}
+  m_Father: {fileID: 218106322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349730817
 GameObject:
@@ -5989,6 +6088,7 @@ Transform:
   - {fileID: 1434060636}
   - {fileID: 517450931}
   - {fileID: 1063770690}
+  - {fileID: 665778775}
   - {fileID: 501745222}
   - {fileID: 1188148974}
   - {fileID: 366381296}
