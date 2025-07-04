@@ -286,7 +286,7 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 9f69a61af80334db4a4d4f8d467a73ad, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 64f9719ac8d643949ada51630f6bde7f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -452,6 +452,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1594399700}
+        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+        m_MethodName: SetDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4900000, guid: 9f69a61af80334db4a4d4f8d467a73ad, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1682,10 +1694,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 844099953637691264, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1829627568376423627, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_Name
       value: Inventory Menu
@@ -2896,6 +2904,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1677359592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1553443353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 844099953637691264, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
+  m_PrefabInstance: {fileID: 959646781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1568266147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3179,11 +3192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guid: 4af7c347509052dc-8451e424a354e6ad
---- !u!1 &1682103820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7136000552329852607, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-  m_PrefabInstance: {fileID: 959646781}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687051953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,7 +3967,7 @@ PrefabInstance:
     - target: {fileID: 906244892217629235, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
       propertyPath: dialogueBox
       value: 
-      objectReference: {fileID: 1682103820}
+      objectReference: {fileID: 1553443353}
     - target: {fileID: 1333935497380247206, guid: a87bf3d10e12465438bbb38be56468e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.922238
