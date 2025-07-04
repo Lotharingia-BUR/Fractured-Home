@@ -2415,6 +2415,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917380536}
   m_CullTransparentMesh: 1
+--- !u!1 &926095706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4027492498079299979, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
+  m_PrefabInstance: {fileID: 1135394790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976936922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,7 +3041,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1128049766544718223, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1216674154}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4027492498079299979, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2141800045}
   m_SourcePrefab: {fileID: 100100000, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
 --- !u!224 &1135394791 stripped
 RectTransform:
@@ -5956,6 +5964,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1170346320703806808, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
   m_PrefabInstance: {fileID: 1135394790}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2141800045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926095706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b13d0f9ddab4c4cb00d726ba9854c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawerPanel: {fileID: 1135394791}
+  toggleButton: {fileID: 1216674155}
+  slideSpeed: 5
 --- !u!1001 &2191342161045023763
 PrefabInstance:
   m_ObjectHideFlags: 0
