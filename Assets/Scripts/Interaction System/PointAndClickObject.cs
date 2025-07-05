@@ -77,6 +77,7 @@ public class PointAndClickObject : Interactable
 
     public void Unlock()
     {
+        _isUnlocked = true;
         PersistentObjectStateManager.Instance.SaveObjectState(gameObject.name, false, true);
         onUnlockedEvent.Invoke();
     }

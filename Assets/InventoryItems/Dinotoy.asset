@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3fc72dccc69944d8a99a125f9256b0, type: 3}
   m_Name: Dinotoy
   m_EditorClassIdentifier: 
-  id: out_key
+  id: DinoToy
   sprite: {fileID: 21300000, guid: 9abbc6ddab895254b9bdd98daa32f13d, type: 3}
