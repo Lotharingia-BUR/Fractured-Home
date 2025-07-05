@@ -946,7 +946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &198982329
 Transform:
   m_ObjectHideFlags: 0
@@ -1524,6 +1524,18 @@ MonoBehaviour:
   onInteractedEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 322356317}
+        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+        m_MethodName: Unlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2010199941}
         m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
         m_MethodName: AddItemToInventory
@@ -1543,18 +1555,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 4900000, guid: d492c47b2221d5246ba638695cf34471, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 322356317}
-        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-        m_MethodName: Unlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5117,7 +5117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+t60qM2EQEAAM0BAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtUMtuwjAQ/JXI57YKkWhKz1Sc2kbQH1jshaxwbOS1KQHx710HaFSpp9HOPmZmzyp4H9Vr4ZK1D4VihKDbL9gKpRpPLhYf3qCSVgfHOXEEp1GapTCWOoosxblQR4FKuF5wInjKM0/lpLhIEaDXwFkmhoRCJMZq3rQ9k877G7Cc6diS3i1/h/+jl2Ao8U0koE6B6YDj5Q54d3V0AJsGp4MFJ8GQYw5zT/Geg0nMe8BtIvN3VZXlpJ4ZKGe6nm5qUz+W9Xr2rNda6zVUL1OthuPkKBLYBh3Y2N++4/foRl8OOhx/ugiwb7OmCfC9oFPneRwlt/ErHRDd5/XE/Q+MQVTohObNUPRhhTGS2+ZVdb6oyw9QSwMEFAAACAgAAJif676/af9uAAAAeQAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKBgaG5ZUqigWWyuWmaeYq5roF5kqVZclJycnJSopGFabJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66XkB+Zl6JO8hspdhaAFBLAQItABQAAAgIAACYn+t60qM2EQEAAM0BAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+u+v2n/bgAAAHkAAAAJACQAAAAAAAAAAAAAAF4BAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAFwIAAAAA
+    dataString: UEsDBBQAAAgIAACYn+td4jOZEwEAANEBAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtUNtuwjAM/ZUqzxtqkaBjzyCetiHYDxjHUIs0QbkwCuLf55SxatKe4hzb5+Kr8s5F9VrYZMxToQKBx+YT9gKplWMbi3enSUmrhfOcQwSLJM1SEMMtxyCfa6HO8lSjStAud0dTqS59VVbFTT4eOoSQpaJPJEAKNJ6vmi4wZo4dmJDh2DAe1r/D/8Fr0JzyTpbzhMkHPtHA3EI43F2dwKTebW/BSjgKMQd6JHnL4STqI+Q+sf67qsqyqmcayhnWk12t6+ey3s6muEXELYxfJqh6crYcGcyKLJjY/VzIHckOviy0NNx16eHYZE3t4WvJl9aFYZTtzm3QE9mPO8XjDoG8qPCF9EJzdH5DMbLd51V1vanbN1BLAwQUAAAICAAAmJ/rvr9p/24AAAB5AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0koGBobllSqKBZbK5aZp5irmugXmSpVlyUnJyclKikYVpslIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrpeQH5mXok7yGyl2FoAUEsBAi0AFAAACAgAAJif613iM5kTAQAA0QEAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif676/af9uAAAAeQAAAAkAJAAAAAAAAAAAAAAAYAEAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAAZAgAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -6968,6 +6968,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 401e43eeca62aea40b162122c17e8b8d, type: 2}
           m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1674591397}
+        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+        m_MethodName: DestroyPNCObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1674591397}
+          m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
