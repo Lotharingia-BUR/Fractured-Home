@@ -110,4 +110,10 @@ public class InventoryManager : Manager<InventoryManager>
     {
         return !inventory.TrueForAll((InventoryItem item) => item.id != inItem.id);
     }
+
+    public void ResetState()
+    {
+        _inventoryDrawer.SetToggle(false);
+        UpdateItemSlots();
+    }
 }

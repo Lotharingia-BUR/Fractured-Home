@@ -12,6 +12,8 @@ public class ManagerInterface : MonoBehaviour
         _dialogue = DialogueManager.Instance;
         _inventory = InventoryManager.Instance;
         _scene = SceneManagerComponent.Instance;
+
+        _inventory.ResetState();
     }
 
     public void SetDialogue(TextAsset dialogue) => _dialogue.SetStory(dialogue);
