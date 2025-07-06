@@ -13,9 +13,13 @@ public class InventoryManager : Manager<InventoryManager>
 
     public event System.Action inventoryChanged;
 
+    private InventoryDrawer _inventoryDrawer;
+
     protected override void Initialize()
     {
         base.Initialize();
+
+        _inventoryDrawer = GetComponentInChildren<InventoryDrawer>(true);
 
         inventoryChanged += UpdateItemSlots;
 
@@ -60,6 +64,8 @@ public class InventoryManager : Manager<InventoryManager>
 
     public void AddItem(InventoryItem inItem)
     {
+        _inventoryDrawer.SetToggle(true);
+
         inventory.Add(inItem);
 
         Debug.Log(inItem.id + " added to inventory");
