@@ -2506,6 +2506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142404749}
   - component: {fileID: 142404750}
+  - component: {fileID: 142404751}
   m_Layer: 0
   m_Name: Torn Photo
   m_TagString: Interactable
@@ -2581,6 +2582,54 @@ PolygonCollider2D:
       - {x: 0.47121727, y: -0.6259074}
       - {x: 0.5027766, y: 0.39943284}
   m_UseDelaunayMesh: 0
+--- !u!114 &142404751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142404748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteractedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1213341939}
+        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+        m_MethodName: AddItemToInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 65c1ac6f4c1acf44ba931f1ee9ca6e0b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &142423370
 GameObject:
   m_ObjectHideFlags: 0
