@@ -1560,7 +1560,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  objectDestinationNode: {fileID: 1159446575}
+  dylanDestinationNode: {fileID: 1159446575}
+  casperDestinationNode: {fileID: 1427096313}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -5332,7 +5333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193872144135016039, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_Name
-      value: Human
+      value: Dylan
       objectReference: {fileID: 0}
     - target: {fileID: 5125333191947777309, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.x
@@ -6956,7 +6957,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 827595061}
+  dylanDestinationNode: {fileID: 827595061}
+  casperDestinationNode: {fileID: 1034000437}
   itemKey: {fileID: 11400000, guid: e8c358a470d01944b88300f87557106e, type: 2}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -7033,7 +7035,8 @@ MonoBehaviour:
           m_StringArgument: Interior 1
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 1045821453}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -8065,7 +8068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5007479862896111013, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_Name
-      value: Cat
+      value: Casper
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8881,7 +8884,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  objectDestinationNode: {fileID: 1159446575}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -9124,7 +9128,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

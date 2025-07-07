@@ -275,7 +275,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -3230,7 +3231,8 @@ MonoBehaviour:
           m_StringArgument: Interior 1
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 1077195177}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -4476,7 +4478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193872144135016039, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_Name
-      value: Human
+      value: Dylan
       objectReference: {fileID: 0}
     - target: {fileID: 5125333191947777309, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4526,7 +4528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5007479862896111013, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_Name
-      value: Cat
+      value: Casper
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalPosition.x

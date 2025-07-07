@@ -295,8 +295,9 @@ MonoBehaviour:
           m_StringArgument: Dylans Room
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 1055326209}
-  itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
+  dylanDestinationNode: {fileID: 1503803087}
+  casperDestinationNode: {fileID: 1055326209}
+  itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1640,7 +1641,8 @@ MonoBehaviour:
           m_StringArgument: Attic
           m_BoolArgument: 1
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1053430516}
+  casperDestinationNode: {fileID: 1379779510}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -1870,7 +1872,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -12713,7 +12716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053430516}
   m_Layer: 0
-  m_Name: Node 60
+  m_Name: Window Node A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12744,7 +12747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1055326209}
   m_Layer: 0
-  m_Name: Dlyan Room Node
+  m_Name: Dylan Room Node A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13315,7 +13318,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -15997,7 +16001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379779510}
   m_Layer: 0
-  m_Name: Node 60
+  m_Name: Window Node B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16109,7 +16113,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -16943,7 +16948,8 @@ MonoBehaviour:
           m_StringArgument: Dylans Room
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 1055326209}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -17251,7 +17257,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -17387,7 +17394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503803087}
   m_Layer: 0
-  m_Name: Dlyan Room Node
+  m_Name: Dylan Room Node B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17629,7 +17636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193872144135016039, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_Name
-      value: Dlyan
+      value: Dylan
       objectReference: {fileID: 0}
     - target: {fileID: 1654040394803445779, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: maxSpeed
@@ -18744,7 +18751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5007479862896111013, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_Name
-      value: Cat
+      value: Casper
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalScale.x
@@ -18964,7 +18971,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9371d1127ac5864e8a29385cdb71d5c, type: 2}
+  - {fileID: 2100000, guid: 88aa590ddb3019447972ea00d7667e2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19069,7 +19076,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -19352,7 +19360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69708873f829ac84b9c7598b7c328440, type: 2}
+  - {fileID: 2100000, guid: 10ef7d6364dd9d6428740fbb2e075d17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21524,7 +21532,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -21679,7 +21688,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -22445,7 +22455,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -22569,7 +22580,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -23440,7 +23452,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  objectDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
