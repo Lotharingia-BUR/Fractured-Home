@@ -326,8 +326,8 @@ MonoBehaviour:
           m_StringArgument: Dylans Room
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 1055326209}
+  dylanDestinationNode: {fileID: 1055326209}
+  casperDestinationNode: {fileID: 433059154}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -1549,7 +1549,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   dylanDestinationNode: {fileID: 1053430516}
-  casperDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 825057757}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -1859,15 +1859,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 24e47620a78274748849df21e3388438, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1927267640}
+  casperDestinationNode: {fileID: 1906022077}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -2541,20 +2541,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 142404751}
+        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+        m_MethodName: DestroyPNCObject
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 142404751}
+          m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 915178773}
+  casperDestinationNode: {fileID: 215942679}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -3006,7 +3006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215942679}
   m_Layer: 0
-  m_Name: Node 46
+  m_Name: Torn Photo B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10146,7 +10146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915178773}
   m_Layer: 0
-  m_Name: Node 46
+  m_Name: Torn Photo A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12265,7 +12265,7 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: b0c762cdc44637743845adfb71766f68, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -15118,7 +15118,7 @@ GameObject:
   - component: {fileID: 1387550840}
   - component: {fileID: 1387550839}
   m_Layer: 0
-  m_Name: SInk
+  m_Name: Sink
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15159,15 +15159,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: f9a660470984c6f4eb3e5934e478fa40, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1897633863}
+  casperDestinationNode: {fileID: 1136637805}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -16094,8 +16094,8 @@ MonoBehaviour:
           m_StringArgument: Parents Room
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1810409820}
+  casperDestinationNode: {fileID: 543762943}
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -16458,15 +16458,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 4e8b048837e2b8a4bb0a94366edf89a6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1796931794}
+  casperDestinationNode: {fileID: 395870728}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -16850,15 +16850,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18351,15 +18351,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18696,15 +18696,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 86cf8b93b35865041bc04f96984515ff, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 2135637544}
+  casperDestinationNode: {fileID: 976233729}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -21171,15 +21171,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 8e6221edfe3ad5f4fbfd8b33328ec2c4, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 975091104}
+  casperDestinationNode: {fileID: 1366151368}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -21389,15 +21389,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: c7e1bebde1a127b41ba8fb5008a1239d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1553063004}
+  casperDestinationNode: {fileID: 1322056446}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -22218,15 +22218,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: ca48c737d34c290449e4eb34db8c5eec, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 2078509052}
+  casperDestinationNode: {fileID: 979541811}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:
@@ -22405,7 +22405,7 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 825fe420754a1a14fb7a29ef8004c9e5, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: b583a036ace0a3b4793dc29d66c0edcd, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -23432,15 +23432,15 @@ MonoBehaviour:
         m_MethodName: SetDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 521f7f3d3e7f6d34696eb060b45ec9a4, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: c1ed34d6e651cba489359f2ba0969162, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+  dylanDestinationNode: {fileID: 1326436726}
+  casperDestinationNode: {fileID: 1169178734}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     m_PersistentCalls:

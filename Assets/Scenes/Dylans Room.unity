@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 48867678}
   m_Layer: 0
-  m_Name: Living Room Node
+  m_Name: Living Room B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3476,7 +3476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827595061}
   m_Layer: 0
-  m_Name: Dino Toy Node
+  m_Name: Dino Toy A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4172,7 +4172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034000437}
   m_Layer: 0
-  m_Name: Dino Toy Node
+  m_Name: Dino Toy B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4234,7 +4234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045821453}
   m_Layer: 0
-  m_Name: Living Room Node
+  m_Name: Living Room A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4579,7 +4579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124298845}
   m_Layer: 0
-  m_Name: Calander Node
+  m_Name: Calander A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4672,7 +4672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159446575}
   m_Layer: 0
-  m_Name: Trashcan Node
+  m_Name: Trashcan A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5961,7 +5961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427096313}
   m_Layer: 0
-  m_Name: Trashcan Node
+  m_Name: Trashcan B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6819,7 +6819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1670872665}
   m_Layer: 0
-  m_Name: Calander Node
+  m_Name: Calander B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
