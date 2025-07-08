@@ -11,6 +11,7 @@ public class ConditionalEvent : MonoBehaviour
     public KeyValuePair<string, PointAndClickObjectState>[] conditions = { };
 
     public UnityEvent onConditionMetEvent;
+    public UnityEvent onReloadedEvent;
 
     [HideInInspector] public string[] conditionKeys = { };
     [HideInInspector] public PointAndClickObjectState[] conditionValues = { };
@@ -33,7 +34,8 @@ public class ConditionalEvent : MonoBehaviour
         TriggerObjectState state = PersistentObjectStateManager.Instance.GetTriggerState(triggerID);
         if (state.wasTriggered)
         {
-            /*Destroy(this);*/
+            onReloadedEvent?.Invoke();
+            Destroy(this);
         }
     }
 
@@ -54,8 +56,9 @@ public class ConditionalEvent : MonoBehaviour
         if (conditionsMet)
         {
             onConditionMetEvent?.Invoke();
+            onReloadedEvent?.Invoke();
             PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-            /*Destroy(this);*/
+            Destroy(this);
         }
     }
 }
