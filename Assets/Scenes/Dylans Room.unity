@@ -3963,11 +3963,14 @@ MonoBehaviour:
   conditionKeys:
   - Dad_DylansRoom
   - Mom_Attic
+  - In_Key
   conditionValues:
   - isCollected: 0
     isUnlocked: 1
   - isCollected: 0
     isUnlocked: 1
+  - isCollected: 1
+    isUnlocked: 0
 --- !u!1 &842334618
 GameObject:
   m_ObjectHideFlags: 0

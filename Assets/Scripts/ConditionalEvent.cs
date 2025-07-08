@@ -33,7 +33,7 @@ public class ConditionalEvent : MonoBehaviour
         TriggerObjectState state = PersistentObjectStateManager.Instance.GetTriggerState(triggerID);
         if (state.wasTriggered)
         {
-            Destroy(this);
+            /*Destroy(this);*/
         }
     }
 
@@ -55,7 +55,7 @@ public class ConditionalEvent : MonoBehaviour
         {
             onConditionMetEvent?.Invoke();
             PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-            Destroy(gameObject);
+            /*Destroy(this);*/
         }
     }
 }
