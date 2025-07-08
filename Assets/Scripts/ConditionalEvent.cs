@@ -11,6 +11,7 @@ public class ConditionalEvent : MonoBehaviour
     public KeyValuePair<string, PointAndClickObjectState>[] conditions = { };
 
     public UnityEvent onConditionMetEvent;
+    public UnityEvent onReloadedEvent;
 
     [HideInInspector] public string[] conditionKeys = { };
     [HideInInspector] public PointAndClickObjectState[] conditionValues = { };
@@ -18,6 +19,13 @@ public class ConditionalEvent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        conditions = new KeyValuePair<string, PointAndClickObjectState>[conditionKeys.Length];
+        for (int i = 0; i < conditions.Length; i++)
+        {
+            var condition = new KeyValuePair<string, PointAndClickObjectState>(conditionKeys[i], conditionValues[i]);
+            conditions[i] = condition;
+        }
+
         if (triggerID == null || triggerID == string.Empty)
         {
             triggerID = gameObject.name;
@@ -26,7 +34,8 @@ public class ConditionalEvent : MonoBehaviour
         TriggerObjectState state = PersistentObjectStateManager.Instance.GetTriggerState(triggerID);
         if (state.wasTriggered)
         {
-            Destroy(gameObject);
+            onReloadedEvent?.Invoke();
+            Destroy(this);
         }
     }
 
@@ -47,8 +56,9 @@ public class ConditionalEvent : MonoBehaviour
         if (conditionsMet)
         {
             onConditionMetEvent?.Invoke();
+            onReloadedEvent?.Invoke();
             PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 }
@@ -58,18 +68,6 @@ public class ConditionalEvent : MonoBehaviour
 public class ConditionalEventEditor : Editor
 {
     private bool _conditionsToggle;
-
-    void OnValidate()
-    {
-        var obj = (ConditionalEvent)target;
-
-        obj.conditions = new KeyValuePair<string, PointAndClickObjectState>[obj.conditionKeys.Length];
-        for (int i = 0; i < obj.conditions.Length; i++)
-        {
-            var condition = new KeyValuePair<string, PointAndClickObjectState>(obj.conditionKeys[i], obj.conditionValues[i]);
-            obj.conditions[i] = condition;
-        }
-    }
 
     public override void OnInspectorGUI()
     {
@@ -117,8 +115,13 @@ public class ConditionalEventEditor : Editor
                 tempValues.Add(new());
             }
 
-            obj.conditionKeys = tempKeys.ToArray();
-            obj.conditionValues = tempValues.ToArray();
+            if (!tempKeys.ToArray().SequenceEqual(obj.conditionKeys) || !tempValues.ToArray().SequenceEqual(obj.conditionValues))
+            {
+                obj.conditionKeys = tempKeys.ToArray();
+                obj.conditionValues = tempValues.ToArray();
+
+                EditorUtility.SetDirty(obj);
+            }
         }
     }
 }

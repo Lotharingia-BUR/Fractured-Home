@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Apple.ReplayKit;
+using UnityEngine.EventSystems;
 
 public class MouseController : Manager<MouseController>
 {
@@ -32,7 +33,10 @@ public class MouseController : Manager<MouseController>
         // If the raycast hits something with the Interactable component, change the cursor to the hand
         if ((hit.collider?.gameObject != null && hit.collider.gameObject.tag == "Interactable") || hit.collider?.GetComponent<Interactable>() != null)
         {
-            Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                Cursor.SetCursor(interactiveCursor, hotspot, CursorMode.Auto); // Change to interactive cursor
+            }
 
 
             //detect mouse when clicked

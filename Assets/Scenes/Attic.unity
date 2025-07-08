@@ -354,11 +354,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.09362507, y: -0.008101463}
+      - {x: -0.48554236, y: -0.066967696}
+      - {x: -0.57582283, y: -0.3172301}
+      - {x: -0.4114651, y: -0.5710441}
+      - {x: 0.18197536, y: -0.62360644}
+      - {x: 0.48474658, y: -0.47388077}
+      - {x: 0.5770321, y: -0.25102305}
+      - {x: 0.34420967, y: -0.07819158}
   m_UseDelaunayMesh: 0
 --- !u!114 &40315394
 MonoBehaviour:
@@ -2205,7 +2208,7 @@ Transform:
   m_GameObject: {fileID: 412605653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2470,7 +2473,7 @@ GameObject:
   - component: {fileID: 465715732}
   - component: {fileID: 465715734}
   m_Layer: 0
-  m_Name: Mom
+  m_Name: Mom_Attic
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2555,28 +2558,16 @@ MonoBehaviour:
       m_Calls: []
   dylanDestinationNode: {fileID: 151471862}
   casperDestinationNode: {fileID: 1019603468}
-  itemKey: {fileID: 11400000, guid: 65c1ac6f4c1acf44ba931f1ee9ca6e0b, type: 2}
+  itemKey: {fileID: 11400000, guid: 070982ec914157a4383377c8ba021eed, type: 2}
   onUnlockedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1671181074}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 070982ec914157a4383377c8ba021eed, type: 2}
-          m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1178642438}
+      - m_Target: {fileID: 465715734}
         m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
         m_MethodName: DestroyPNCObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1178642438}
+          m_ObjectArgument: {fileID: 465715734}
           m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6826,6 +6817,7 @@ Transform:
   - {fileID: 1671181073}
   - {fileID: 781344746}
   - {fileID: 1568266150}
+  - {fileID: 1730832776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365773993
@@ -8715,6 +8707,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1163336624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1730832775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730832776}
+  m_Layer: 0
+  m_Name: Contidtional Event
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730832776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730832775}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.9220326, y: 16.402283, z: 51.04257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1353802439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1755274095
 GameObject:

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
 public class Interactable : MonoBehaviour
@@ -9,6 +10,8 @@ public class Interactable : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
+
         OnClicked();
     }
 
