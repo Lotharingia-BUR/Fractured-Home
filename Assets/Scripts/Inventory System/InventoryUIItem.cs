@@ -39,7 +39,7 @@ public class InventoryUIItem : UIHoverable
     {
         if (used)
         {
-            _image.enabled = false;
+            Destroy(gameObject);
         }
         else
         {
