@@ -4707,8 +4707,9 @@ GameObject:
   m_Component:
   - component: {fileID: 352100609}
   - component: {fileID: 352100610}
+  - component: {fileID: 352100611}
   m_Layer: 0
-  m_Name: Dad
+  m_Name: Dad_Kitchen
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4776,6 +4777,54 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7436991, y: 5.7612886}
   m_EdgeRadius: 0
+--- !u!114 &352100611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352100608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteractedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dylanDestinationNode: {fileID: 0}
+  casperDestinationNode: {fileID: 0}
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onInteractUnlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &354335075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,7 +5801,7 @@ GameObject:
   - component: {fileID: 470520744}
   - component: {fileID: 470520745}
   m_Layer: 0
-  m_Name: Mom
+  m_Name: Mom_Kitchen
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
