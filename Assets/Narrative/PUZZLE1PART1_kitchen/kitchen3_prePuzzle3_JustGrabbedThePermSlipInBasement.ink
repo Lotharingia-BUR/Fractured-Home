@@ -10,7 +10,7 @@ Dylan: "Maybe if I go and ask properly this time, they can be at peace."
 
 Casper: 'Atta boy. Humans can't read minds like cats can.'
 
-Casper: 'Communicating helps to ensure everyone's needs are heard.'
+Casper: 'So, communicating helps to ensure everyone's needs are heard.'
 
 Dylan: "Come on Casper!"
 
