@@ -56,7 +56,7 @@ public class PointAndClickCharacterController : MonoBehaviour
 
         yield return new WaitUntil(() => (_path.endPoint - transform.position).magnitude <= 0.2);
 
-        pncObject.SendMessage("ObjectReached", gameObject.name);
+        if (pncObject != null) { pncObject.SendMessage("ObjectReached", gameObject.name); }
 
         _movementOverrideCoroutine = null;
     }
