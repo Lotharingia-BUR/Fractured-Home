@@ -435,6 +435,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 193587968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &67672343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67672344}
+  m_Layer: 0
+  m_Name: Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &67672344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67672343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1498911, y: -13.086316, z: -33.02358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 953728201}
+  - {fileID: 834780960}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &68281813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,6 +3932,9 @@ MonoBehaviour:
   triggerID: Dad_Toy
   onConditionMetEvent:
     m_PersistentCalls:
+      m_Calls: []
+  onReloadedEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1411863528}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3926,11 +3962,11 @@ Transform:
   m_GameObject: {fileID: 834780958}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9220326, y: 16.402283, z: 51.04257}
+  m_LocalPosition: {x: -1.1498911, y: 13.086316, z: 43.02358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1885716223}
+  m_Father: {fileID: 67672344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &834780961
 MonoBehaviour:
@@ -3960,17 +3996,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onReloadedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   conditionKeys:
   - Dad_DylansRoom
   - Mom_Attic
-  - In_Key
   conditionValues:
-  - isCollected: 0
-    isUnlocked: 1
-  - isCollected: 0
+  - isCollected: 1
     isUnlocked: 1
   - isCollected: 1
-    isUnlocked: 0
+    isUnlocked: 1
 --- !u!1 &842334618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,11 +4418,11 @@ Transform:
   m_GameObject: {fileID: 953728198}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9220326, y: 16.402283, z: 41.04257}
+  m_LocalPosition: {x: -1.1498911, y: 13.086316, z: 33.02358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1885716223}
+  m_Father: {fileID: 67672344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955536016
 GameObject:
@@ -6704,7 +6740,19 @@ MonoBehaviour:
   itemKey: {fileID: 11400000, guid: 401e43eeca62aea40b162122c17e8b8d, type: 2}
   onUnlockedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1411863531}
+        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+        m_MethodName: DestroyPNCObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1411863531}
+          m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInteractUnlockedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9288,8 +9336,6 @@ Transform:
   m_Children:
   - {fileID: 2010199940}
   - {fileID: 1092145243}
-  - {fileID: 953728201}
-  - {fileID: 834780960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904185292
@@ -11090,6 +11136,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1741689932}
   - {fileID: 83306641}
+  - {fileID: 67672344}
   - {fileID: 1885716223}
   - {fileID: 869998715}
   - {fileID: 94523440}
