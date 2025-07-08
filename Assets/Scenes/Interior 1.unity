@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75715de7ef62eee438b843488b4287eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerID: 
+  triggerID: Enter
   triggerOnce: 1
   onTriggerEvent:
     m_PersistentCalls:
@@ -18770,6 +18770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casper
       objectReference: {fileID: 0}
+    - target: {fileID: 5537665650254981190, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.85
@@ -24708,7 +24712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75715de7ef62eee438b843488b4287eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerID: 
+  triggerID: Enter 2
   triggerOnce: 1
   onTriggerEvent:
     m_PersistentCalls:
