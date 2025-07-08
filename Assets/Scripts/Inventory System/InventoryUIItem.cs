@@ -39,7 +39,7 @@ public class InventoryUIItem : UIHoverable
     {
         if (used)
         {
-            this.SetVisibility(false);
+            _image.enabled = false;
         }
         else
         {
