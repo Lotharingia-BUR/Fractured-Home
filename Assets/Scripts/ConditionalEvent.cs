@@ -12,7 +12,7 @@ public class ConditionalEvent : MonoBehaviour
 
     public UnityEvent onConditionMetEvent;
 
-    [HideInInspector] public string[] conditionKeys = { };
+    [HideInInspector][SerializeField] public string[] conditionKeys = { };
     [HideInInspector][SerializeField] public PointAndClickObjectState[] conditionValues = { };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
