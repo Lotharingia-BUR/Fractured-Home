@@ -150,6 +150,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1858296253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7775089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8765690391893024659, guid: c83b051aee489e14681490236f0871ec, type: 3}
+  m_PrefabInstance: {fileID: 2010199939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &16095135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,6 +7465,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2010199941}
+        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+        m_MethodName: RemoveItemFromInventory
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: battery
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1674591397}
         m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
         m_MethodName: DestroyPNCObject
@@ -7467,6 +7484,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1674591397}
           m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7775089}
+        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9241,7 +9270,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3996320655655625484, guid: c83b051aee489e14681490236f0871ec, type: 3}
   m_PrefabInstance: {fileID: 2010199939}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7775089}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04a80273f1fdf9f40bc2e712d952b96e, type: 3}

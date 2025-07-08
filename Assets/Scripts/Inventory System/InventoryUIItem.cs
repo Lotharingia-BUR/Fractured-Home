@@ -39,7 +39,7 @@ public class InventoryUIItem : UIHoverable
     {
         if (used)
         {
-            Destroy(gameObject);
+            this.SetVisibility(false);
         }
         else
         {

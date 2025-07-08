@@ -75,15 +75,17 @@ public class InventoryManager : Manager<InventoryManager>
 
     public void RemoveItem(string itemID)
     {
+        Debug.Log("REMOVE ITEM");
         foreach (InventoryItem item in inventory)
         {
             if (item.id == itemID)
             {
                 inventory.Remove(item);
+
+                Debug.Log(item.id + " removed from inventory");
                 return;
             }
         }
-
         OnInventoryChanged();
     }
 
