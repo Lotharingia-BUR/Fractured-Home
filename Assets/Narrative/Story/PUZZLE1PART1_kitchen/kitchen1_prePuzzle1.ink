@@ -21,7 +21,7 @@ Dylan's father: "All because you were raving about your work that week he needed
 
 Dylan's mother: "Don't push this all on me. You're the one who's always too busy to pay attention to your own son!"
 
-Dylan's father: "I was busy!"
+Dylan's father: "I *was* busy!"
 
 Dylan's mother: "So was I!"
 

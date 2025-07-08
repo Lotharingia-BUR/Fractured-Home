@@ -4,7 +4,6 @@ Casper: "MEOW!"
 
 Dylan: "What is it? Did you find something? The rug?"
 
-*[Check under the rug]
 
 //* player finds the key, and opens the door
 
