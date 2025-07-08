@@ -9,9 +9,11 @@ using UnityEditor;
 
 public class PointAndClickObject : Interactable
 {
-    public Transform objectDestinationNode;
+    public Transform dylanDestinationNode;
+    public Transform casperDestinationNode;
 
-    private PointAndClickCharacterController _pointAndClickCharacter;
+    private PointAndClickCharacterController _dylan;
+    private PointAndClickCharacterController _casper;
 
     public InventoryItem itemKey;
     public UnityEvent onUnlockedEvent;
@@ -36,7 +38,19 @@ public class PointAndClickObject : Interactable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _pointAndClickCharacter = FindFirstObjectByType<PointAndClickCharacterController>();
+        PointAndClickCharacterController[] pncCharas = FindObjectsByType<PointAndClickCharacterController>(FindObjectsSortMode.None);
+
+        foreach (PointAndClickCharacterController chara in pncCharas)
+        {
+            if (chara.gameObject.name == "Human" || chara.gameObject.name == "Dylan")
+            {
+                _dylan = chara;
+            }
+            else if (chara.gameObject.name == "Cat" || chara.gameObject.name == "Casper")
+            {
+                _casper = chara;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -53,11 +67,14 @@ public class PointAndClickObject : Interactable
 
     protected override void OnClicked()
     {
-        _pointAndClickCharacter.SetDestination(this);
+        _dylan.SetDestination(this, dylanDestinationNode);
+        _casper.SetDestination(this, casperDestinationNode);
     }
 
-    private void ObjectReached()
+    private void ObjectReached(string senderName)
     {
+        if (senderName != "Human" && senderName != "Dylan") { return; }
+
         if (_isUnlocked)
         {
             if (onInteractUnlockedEvent == null)
@@ -77,6 +94,7 @@ public class PointAndClickObject : Interactable
 
     public void Unlock()
     {
+        _isUnlocked = true;
         PersistentObjectStateManager.Instance.SaveObjectState(gameObject.name, false, true);
         onUnlockedEvent.Invoke();
     }

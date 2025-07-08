@@ -36,18 +36,18 @@ public class PointAndClickCharacterController : MonoBehaviour
         _seeker.StartPath(transform.position, targetPos, OnPathComplete);
     }
 
-    public void SetDestination(PointAndClickObject destinationObject)
+    public void SetDestination(PointAndClickObject sender, Transform destinationNode)
     {
-        if (destinationObject.objectDestinationNode != null)
+        if (destinationNode != null)
         {
-            SetDestination(destinationObject.objectDestinationNode.position);
+            SetDestination(destinationNode.position);
         }
         else
         {
-            SetDestination(destinationObject.transform.position);
+            SetDestination(destinationNode.transform.position);
         }
 
-        _movementOverrideCoroutine = StartCoroutine(MoveToObjectCoroutine(destinationObject));
+        _movementOverrideCoroutine = StartCoroutine(MoveToObjectCoroutine(sender));
     }
 
     private IEnumerator MoveToObjectCoroutine(PointAndClickObject pncObject)
@@ -56,7 +56,7 @@ public class PointAndClickCharacterController : MonoBehaviour
 
         yield return new WaitUntil(() => (_path.endPoint - transform.position).magnitude <= 0.2);
 
-        pncObject.SendMessage("ObjectReached");
+        pncObject.SendMessage("ObjectReached", gameObject.name);
 
         _movementOverrideCoroutine = null;
     }

@@ -1,3 +1,0 @@
-Ding Dong!
-
-    -> END

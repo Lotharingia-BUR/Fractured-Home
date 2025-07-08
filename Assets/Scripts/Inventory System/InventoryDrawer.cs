@@ -30,6 +30,14 @@ public class InventoryDrawer : MonoBehaviour
         isOpen = !isOpen;
     }
 
+    public void SetToggle(bool open)
+    {
+        if (isOpen != open)
+        {
+            ToggleDrawer();
+        }
+    }
+
     void Update()
     {
         Vector2 target = isOpen ? shownPosition : hiddenPosition;
