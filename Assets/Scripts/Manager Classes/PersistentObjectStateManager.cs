@@ -77,9 +77,9 @@ public class PersistentObjectStateManager : Manager<PersistentObjectStateManager
 
     public TriggerObjectState GetTriggerState(string objectID)
     {
-        if (_objectStates.ContainsKey(objectID))
+        if (_triggerStates.ContainsKey(objectID))
         {
-            Debug.Log($"Loaded data for {objectID} as {_objectStates[objectID].isCollected}, {_objectStates[objectID].isUnlocked}");
+            Debug.Log($"Loaded data for {objectID} as {_triggerStates[objectID].wasTriggered}");
 
             return _triggerStates[objectID];
         }
