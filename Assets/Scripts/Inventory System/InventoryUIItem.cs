@@ -40,6 +40,7 @@ public class InventoryUIItem : UIHoverable
         if (used)
         {
             _image.enabled = false;
+            InventoryManager.Instance.RemoveItem(item);
         }
         else
         {
