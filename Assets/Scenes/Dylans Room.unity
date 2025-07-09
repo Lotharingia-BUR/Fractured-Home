@@ -6269,6 +6269,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dylan
       objectReference: {fileID: 0}
+    - target: {fileID: 1654040394803445779, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2307409767724668876, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5125333191947777309, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.25
@@ -6289,7 +6297,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1654040394803445779, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9721,6 +9730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 869998715}
     m_Modifications:
+    - target: {fileID: 3686855968152699554, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
+      propertyPath: accelerationTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5007479862896111013, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: m_Name
       value: Casper
@@ -9769,7 +9782,8 @@ PrefabInstance:
       propertyPath: onInteractedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1741689933}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4995778510885341549, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

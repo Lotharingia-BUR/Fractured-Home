@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6706383220102595070}
   - component: {fileID: 8601651305892849903}
-  - component: {fileID: 4995778510885341549}
   - component: {fileID: 3686855968152699554}
   - component: {fileID: 8159972617036264881}
   - component: {fileID: 7376147344061378321}
@@ -66,48 +65,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &4995778510885341549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007479862896111013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
-  radius: 0.5
-  height: 2
-  canMove: 1
-  maxSpeed: 5
-  gravity: {x: 0, y: 0, z: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffsetCompatibility: NaN
-  repathRateCompatibility: NaN
-  canSearchCompability: 0
-  orientation: 1
-  enableRotation: 0
-  autoRepath:
-    mode: 0
-    interval: 0.5
-    sensitivity: 10
-    maximumInterval: 2
-    visualizeSensitivity: 0
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 0.1
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
-  constrainInsideGraph: 0
 --- !u!114 &3686855968152699554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af13c7dd0b13f64994ac4b44da3455f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 5
+  accelerationTime: 0.3
+  nodeReachedDistance: 0.01
 --- !u!60 &8159972617036264881
 PolygonCollider2D:
   m_ObjectHideFlags: 0
