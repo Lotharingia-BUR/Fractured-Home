@@ -8,8 +8,6 @@ using TMPro;
 //Handles reading dialogue from an Ink story asset and writing it to the dialogue box
 public class DialogueManager : Singleton<DialogueManager>
 {
-    //Ink story asset to read dialogue from
-    public TextAsset inkAsset;
     //UI text to write dialogue to
     public TMP_Text mainText;
 
@@ -18,13 +16,6 @@ public class DialogueManager : Singleton<DialogueManager>
 
     //Currently selected dialogue choice
     private int _selectedChoice = 0;
-
-    protected override void Initialize()
-    {
-        base.Initialize();
-
-        SetStory(inkAsset);
-    }
 
     /// <summary>
     /// Reset the current Ink story and set the given Ink JSON asset as the current story
