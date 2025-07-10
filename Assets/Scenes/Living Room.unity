@@ -5095,13 +5095,13 @@ MonoBehaviour:
     events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1203657648}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgument: {fileID: 4900000, guid: fb42bf33616a2334f9197ae07ed4b7ed, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5109,6 +5109,18 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: FadeOut
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 800394987}
           m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_MethodName: DestroyPNCObject
@@ -5121,13 +5133,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1203657648}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgument: {fileID: 4900000, guid: baab07fbd09990b48bca11048ccef94c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5135,13 +5147,39 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1203657648}
-          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: FadeOut
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 352100608}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 1515d3e27ccd49841bd2a38bd8622384, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5154,6 +5192,20 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 352100611}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: DestroyPNCObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -13772,11 +13824,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6113874411207637662, guid: c83b051aee489e14681490236f0871ec, type: 3}
   m_PrefabInstance: {fileID: 1203657646}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1203657648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8765690391893024659, guid: c83b051aee489e14681490236f0871ec, type: 3}
-  m_PrefabInstance: {fileID: 1203657646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1205715316
 GameObject:
   m_ObjectHideFlags: 0
@@ -13968,7 +14015,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3996320655655625484, guid: c83b051aee489e14681490236f0871ec, type: 3}
   m_PrefabInstance: {fileID: 1203657646}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203657648}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04a80273f1fdf9f40bc2e712d952b96e, type: 3}
