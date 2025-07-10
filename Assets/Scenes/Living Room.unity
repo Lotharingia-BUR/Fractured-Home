@@ -1090,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 44649763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.08, y: -3.14, z: 2.16}
+  m_LocalPosition: {x: -21.65, y: -3.14, z: 2.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9456,7 +9456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795525067}
   m_Layer: 0
-  m_Name: Node 11
+  m_Name: Mirror A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10334,13 +10334,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869570143}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08715578, w: 0.9961947}
   m_LocalPosition: {x: -0.12, y: 0, z: 0.13}
   m_LocalScale: {x: -0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1372340341}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
 --- !u!64 &869570145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10386,7 +10386,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 374d287cc174c73418acb1a3540097a0, type: 2}
+  - {fileID: 2100000, guid: f6b2f59ba9ce430478ba68812320510b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13674,6 +13674,7 @@ Transform:
   - {fileID: 1982272531}
   - {fileID: 2077531332}
   - {fileID: 1716300313}
+  - {fileID: 1678738742}
   m_Father: {fileID: 90654680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180497898
@@ -16021,7 +16022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1372340341
 Transform:
   m_ObjectHideFlags: 0
@@ -16309,7 +16310,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: f9a660470984c6f4eb3e5934e478fa40, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 51e223c90a970284a8cd59ad65f9ad93, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -17743,7 +17744,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: 4e8b048837e2b8a4bb0a94366edf89a6, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 53cb38be1e459384c9e49df265c9f6a1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -19402,7 +19403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645697723}
   m_Layer: 0
-  m_Name: Node 11
+  m_Name: Mirror B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19764,6 +19765,131 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1546857067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1678738741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1678738742}
+  - component: {fileID: 1678738744}
+  - component: {fileID: 1678738743}
+  m_Layer: 0
+  m_Name: Mirror
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1678738742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678738741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.68, y: 2.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1180157944}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678738743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678738741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteractedEvent:
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1213341939}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 8b670eea71a26c04db9cd117f410b999, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 795525067}
+  casperDestinationNode: {fileID: 1645697723}
+  itemKey: {fileID: 0}
+  onUnlockedEvent:
+    events: []
+  onInteractUnlockedEvent:
+    events: []
+--- !u!60 &1678738744
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678738741}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.3218665, y: -0.083553076}
+      - {x: 1.2218719, y: 0.38449073}
+      - {x: 1.0632343, y: 0.75208473}
+      - {x: 0.8136053, y: 0.9387028}
+      - {x: 0.17716503, y: 0.89712954}
+      - {x: 0.059366226, y: 0.7161603}
+      - {x: -0.36576867, y: 0.1055353}
+      - {x: -0.19546866, y: -0.83741283}
+      - {x: 0.46705306, y: -1.1523416}
+      - {x: 1.1044159, y: -0.78671885}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1681039495
 GameObject:
   m_ObjectHideFlags: 0
@@ -22860,7 +22986,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: c7e1bebde1a127b41ba8fb5008a1239d, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 68d7e6467f9598b41a3fa7c3b2973543, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
