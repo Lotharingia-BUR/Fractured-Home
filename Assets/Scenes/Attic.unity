@@ -376,7 +376,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: AddItemToInventory
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: e8c358a470d01944b88300f87557106e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 40315394}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: DestroyPNCObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 40315394}
+            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 1142966518}
   casperDestinationNode: {fileID: 1090852038}
   itemKey: {fileID: 0}
@@ -9428,9 +9454,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerID: Give_inKey
   onConditionMetEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: AddItemToInventory
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 7a3f8483874c60541a0c7be7b82df68c, type: 2}
+            m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   onReloadedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls: []
   conditionKeys:
   - Dad_DylansRoom
   - Mom_Attic
