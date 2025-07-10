@@ -11,6 +11,8 @@ public class EventTriggerBox : MonoBehaviour
 
     public GameplayEvent onTriggerEvent;
 
+    private Coroutine eventCoroutine = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,17 +39,17 @@ public class EventTriggerBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PointAndClickCharacterController>() != null)
+        if (eventCoroutine == null && collision.GetComponent<PointAndClickCharacterController>() != null)
         {
-            StartCoroutine(EventCoroutine());
+            eventCoroutine = StartCoroutine(EventCoroutine());
         }
     }
 
     private IEnumerator EventCoroutine()
     {
-        var c = StartCoroutine(onTriggerEvent.Run());
+        StartCoroutine(onTriggerEvent.Run());
 
-        yield return new WaitUntil(() => c == null);
+        yield return new WaitForSeconds(0.1f);
 
         if (triggerOnce)
         {
