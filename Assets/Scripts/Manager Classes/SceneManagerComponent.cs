@@ -8,6 +8,8 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
 {
     public float transitionTime = 1f;
 
+    public string prevScene { get; private set; }
+
     private Animator _animator;
 
     private int _fadeInHash, _fadeOutHash;
@@ -37,6 +39,8 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
 
     private IEnumerator SceneTransition(string sceneName)
     {
+        prevScene = SceneManager.GetActiveScene().name;
+
         _animator.SetTrigger(_fadeOutHash);
         PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
 
@@ -52,6 +56,8 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
 
     private IEnumerator SceneTransition(int sceneID)
     {
+        prevScene = SceneManager.GetActiveScene().name;
+
         _animator.SetTrigger(_fadeOutHash);
         PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
 

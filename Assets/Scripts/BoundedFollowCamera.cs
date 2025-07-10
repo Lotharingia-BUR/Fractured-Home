@@ -29,7 +29,7 @@ public class BoundedFollowCamera : MonoBehaviour
 
         _viewportHalfSize = new(followCamera.aspect * followCamera.orthographicSize, followCamera.orthographicSize);
 
-        bounds.extents -= _viewportHalfSize;
+        bounds.extents -= _viewportHalfSize + Vector3.one;
 
         Vector3 desiredPosition = target.position + new Vector3(offset.x, offset.y, transform.position.z);
         desiredPosition.x = Mathf.Clamp(desiredPosition.x, bounds.min.x, bounds.max.x);
@@ -60,13 +60,14 @@ public class BoundedFollowCamera : MonoBehaviour
         transform.position = smoothedPosition;
     }
 
-    public void Shake(float intensity, float duration)
+    public void Shake(float intensity)
     {
-        StartCoroutine(ShakeCoroutine(intensity, duration));
+        StartCoroutine(ShakeCoroutine(intensity, 1f));
     }
 
     private IEnumerator ShakeCoroutine(float intensity, float duration)
     {
+        PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
         float elapsed = 0f;
         while (elapsed < duration)
         {
@@ -75,6 +76,7 @@ public class BoundedFollowCamera : MonoBehaviour
             yield return null;
         }
         _shakeOffset = Vector3.zero;
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
     }
 
     void OnDrawGizmosSelected()
