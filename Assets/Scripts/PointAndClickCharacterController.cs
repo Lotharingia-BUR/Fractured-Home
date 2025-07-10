@@ -1,10 +1,16 @@
 using System.Collections;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
 public class PointAndClickCharacterController : MonoBehaviour
 {
+    public enum FacingDirection
+    {
+        Left = -1, Right = 1
+    }
+
     public float maxSpeed = 5f;
     public float accelerationTime = 0.2f;
 
@@ -14,17 +20,25 @@ public class PointAndClickCharacterController : MonoBehaviour
     private Vector3 _currentVelocity;
     private float _acceleration;
 
+    private FacingDirection _facingDirection = FacingDirection.Right;
+
     private Coroutine _movementOverrideCoroutine = null;
     private Coroutine _currentlyFollowingPath = null;
 
     private ABPath _path;
 
     private Seeker _seeker;
+    private Animator _animator;
+
+    private int _speedHash;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _seeker = GetComponent<Seeker>();
+        _animator = GetComponent<Animator>();
+
+        _speedHash = Animator.StringToHash("speed");
 
         _acceleration = maxSpeed / accelerationTime;
     }
@@ -37,6 +51,24 @@ public class PointAndClickCharacterController : MonoBehaviour
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetDestination(mouseWorldPos);
         }
+
+        AnimUpdate();
+    }
+
+    private void AnimUpdate()
+    {
+        if (_facingDirection == FacingDirection.Right && _currentVelocity.x < 0.01f)
+        {
+            _facingDirection = FacingDirection.Left;
+            transform.Rotate(new(0f, 180f, 0f));
+        }
+        else if (_facingDirection == FacingDirection.Left && _currentVelocity.x > 0.01f)
+        {
+            _facingDirection = FacingDirection.Right;
+            transform.Rotate(new(0f, 180f, 0f));
+        }
+
+        _animator.SetFloat(_speedHash, _currentSpeed);
     }
 
     public void SetDestination(Vector2 destination)
@@ -140,6 +172,9 @@ public class PointAndClickCharacterController : MonoBehaviour
         } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
 
         Debug.Log($"Reached final node of path");
+
+        _currentSpeed = 0f;
+        _currentVelocity = Vector3.zero;
 
         _currentlyFollowingPath = null;
     }
