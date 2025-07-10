@@ -37,6 +37,21 @@ public class EventTriggerBox : MonoBehaviour
 
     }
 
+    void OnMouseDown()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D[] hitsArray = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+        foreach (RaycastHit2D hit in hitsArray)
+        {
+            Interactable o = hit.collider?.GetComponent<Interactable>();
+            if (o != null)
+            {
+                o.Click();
+            }
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         PointAndClickCharacterController chara = collision.GetComponent<PointAndClickCharacterController>();

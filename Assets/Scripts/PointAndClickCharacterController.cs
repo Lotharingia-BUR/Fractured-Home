@@ -35,10 +35,25 @@ public class PointAndClickCharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !EventSystem.current.IsPointerOverGameObject() && PauseModeManager.Instance.pauseMode == PauseMode.Unpaused)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !MouseController.Instance.isOverObject && PauseModeManager.Instance.pauseMode == PauseMode.Unpaused)
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetDestination(mouseWorldPos);
+        }
+    }
+
+    void OnMouseDown()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D[] hitsArray = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+        foreach (RaycastHit2D hit in hitsArray)
+        {
+            Interactable o = hit.collider?.GetComponent<Interactable>();
+            if (o != null)
+            {
+                o.Click();
+            }
         }
     }
 
@@ -65,7 +80,7 @@ public class PointAndClickCharacterController : MonoBehaviour
         }
         else
         {
-            SetDestination(destinationNode.transform.position);
+            SetDestination(sender.transform.position);
         }
 
         _movementOverrideCoroutine = StartCoroutine(MoveToObjectCoroutine(sender));
@@ -73,9 +88,12 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     private IEnumerator MoveToObjectCoroutine(PointAndClickObject pncObject)
     {
+        yield return new WaitUntil(() => _currentlyFollowingPath == null);
+        yield return new WaitForEndOfFrame();
+
         yield return new WaitUntil(() => _path != null);
 
-        yield return new WaitUntil(() => (_path.endPoint - transform.position).magnitude <= 0.2);
+        yield return new WaitUntil(() => _currentlyFollowingPath == null);
 
         if (pncObject != null) { pncObject.SendMessage("ObjectReached", gameObject.name); }
 

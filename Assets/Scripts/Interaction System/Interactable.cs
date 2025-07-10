@@ -15,6 +15,11 @@ public class Interactable : MonoBehaviour
         OnClicked();
     }
 
+    public void Click()
+    {
+        OnClicked();
+    }
+
     protected virtual void OnClicked()
     {
         if (onInteractedEvent == null)
