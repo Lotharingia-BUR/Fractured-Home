@@ -15559,6 +15559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335629359}
   - component: {fileID: 1335629358}
+  - component: {fileID: 1335629360}
   m_Layer: 0
   m_Name: NavGraph
   m_TagString: Untagged
@@ -15638,6 +15639,32 @@ Transform:
   - {fileID: 1592176849}
   m_Father: {fileID: 218106322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335629360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335629357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120f76ed2d5c49f4b91ea61abcb71da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dylan: {fileID: 1528247557}
+  casper: {fileID: 842400040}
+  sourceScenes:
+  - Dylans Room
+  - Attic
+  - Parents Room
+  dylanPositions:
+  - {fileID: 1055326209}
+  - {fileID: 1053430516}
+  - {fileID: 1810409820}
+  casperPositions:
+  - {fileID: 433059154}
+  - {fileID: 825057757}
+  - {fileID: 543762943}
 --- !u!1 &1337709045
 GameObject:
   m_ObjectHideFlags: 0
