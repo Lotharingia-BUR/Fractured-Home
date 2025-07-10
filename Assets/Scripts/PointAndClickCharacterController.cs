@@ -20,7 +20,7 @@ public class PointAndClickCharacterController : MonoBehaviour
     private Vector3 _currentVelocity;
     private float _acceleration;
 
-    private FacingDirection _facingDirection = FacingDirection.Right;
+    private FacingDirection _facingDirection = FacingDirection.Left;
 
     private Coroutine _movementOverrideCoroutine = null;
     private Coroutine _currentlyFollowingPath = null;
@@ -57,15 +57,15 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     private void AnimUpdate()
     {
-        if (_facingDirection == FacingDirection.Right && _currentVelocity.x < 0.01f)
+        if (_facingDirection == FacingDirection.Right && _currentVelocity.x > 0.01f)
         {
             _facingDirection = FacingDirection.Left;
-            transform.Rotate(new(0f, 180f, 0f));
+            transform.localScale = new(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
-        else if (_facingDirection == FacingDirection.Left && _currentVelocity.x > 0.01f)
+        else if (_facingDirection == FacingDirection.Left && _currentVelocity.x < -0.01f)
         {
             _facingDirection = FacingDirection.Right;
-            transform.Rotate(new(0f, 180f, 0f));
+            transform.localScale = new(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 
         _animator.SetFloat(_speedHash, _currentSpeed);
@@ -82,6 +82,8 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(PointAndClickObject sender, Transform destinationNode)
     {
+        if (_movementOverrideCoroutine != null || _currentlyFollowingPath != null) { return; }
+
         if (destinationNode != null)
         {
             SetDestination(destinationNode.position);
@@ -131,47 +133,50 @@ public class PointAndClickCharacterController : MonoBehaviour
     {
         yield return new WaitUntil(() => _path != null);
 
-        Vector3 currentLine;
-
-        float distanceOnLine;
-
-        for (int i = 1; i < _path.path.Count - 1; i++)
+        if (_path.path.Count > 1)
         {
-            currentLine = (Vector3)(_path.path[i].position - _path.path[i - 1].position);
-            _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
+            Vector3 currentLine;
 
+            float distanceOnLine;
+
+            for (int i = 1; i < _path.path.Count - 1; i++)
+            {
+                currentLine = (Vector3)(_path.path[i].position - _path.path[i - 1].position);
+                _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
+
+                distanceOnLine = 0f;
+                do
+                {
+                    _currentSpeed = Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed);
+                    _currentVelocity = _currentSpeed * currentLine.normalized;
+
+                    distanceOnLine += _currentSpeed * Time.deltaTime;
+
+                    transform.position = Vector3.Lerp((Vector3)_path.path[i - 1].position, (Vector3)_path.path[i].position, distanceOnLine / currentLine.magnitude);
+
+                    yield return null;
+                } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
+
+                Debug.Log($"Reached node {i} of {_path.path.Count - 1}");
+            }
+
+            currentLine = (Vector3)(_path.endNode.position - _path.path[_path.path.Count - 2].position);
+            _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
             distanceOnLine = 0f;
             do
             {
-                _currentSpeed = Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed);
-                _currentVelocity = _currentSpeed * currentLine.normalized;
+                float decelerationDistance = -Mathf.Pow(_currentSpeed, 2f) / (2 * -_acceleration);
+                _currentSpeed = currentLine.magnitude - distanceOnLine > decelerationDistance ? Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed) : _currentSpeed - _acceleration * Time.deltaTime;
 
                 distanceOnLine += _currentSpeed * Time.deltaTime;
 
-                transform.position = Vector3.Lerp((Vector3)_path.path[i - 1].position, (Vector3)_path.path[i].position, distanceOnLine / currentLine.magnitude);
+                transform.position = Vector3.Lerp((Vector3)_path.path[_path.path.Count - 2].position, (Vector3)_path.endNode.position, distanceOnLine / currentLine.magnitude);
 
                 yield return null;
             } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
 
-            Debug.Log($"Reached node {i} of {_path.path.Count - 1}");
+            Debug.Log($"Reached final node of path");
         }
-
-        currentLine = (Vector3)(_path.endNode.position - _path.path[_path.path.Count - 2].position);
-        _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
-        distanceOnLine = 0f;
-        do
-        {
-            float decelerationDistance = -Mathf.Pow(_currentSpeed, 2f) / (2 * -_acceleration);
-            _currentSpeed = currentLine.magnitude - distanceOnLine > decelerationDistance ? Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed) : _currentSpeed - _acceleration * Time.deltaTime;
-
-            distanceOnLine += _currentSpeed * Time.deltaTime;
-
-            transform.position = Vector3.Lerp((Vector3)_path.path[_path.path.Count - 2].position, (Vector3)_path.endNode.position, distanceOnLine / currentLine.magnitude);
-
-            yield return null;
-        } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
-
-        Debug.Log($"Reached final node of path");
 
         _currentSpeed = 0f;
         _currentVelocity = Vector3.zero;
