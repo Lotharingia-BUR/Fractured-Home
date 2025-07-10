@@ -2,7 +2,7 @@
 
 //This piece is for when the player first enters the basement and Dylan reminds them of their task + gives a little bit of story too.
 
-Dylan: "Oh man, this place looks like it hasn't been cleaned it in a hundred years!"
+Dylan: "Oh man, this place looks like it hasn't been cleaned in a hundred years!"
 
 //lol avatar reference 
 

@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 78302821}
   - component: {fileID: 78302822}
   m_Layer: 0
-  m_Name: Door (locked)
+  m_Name: Door
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 784533965}
-  m_Father: {fileID: 2014402936}
+  - {fileID: 564643458}
+  m_Father: {fileID: 2067656099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &78302821
 PolygonCollider2D:
@@ -279,77 +280,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1594399700}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: SetDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: ba26a9f56754b405ea6fe5928deb7391, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1594399700}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: ba26a9f56754b405ea6fe5928deb7391, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 1452270229}
   casperDestinationNode: {fileID: 687651537}
   itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 720175638}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Interior 1
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 2aa1069fcde4f5f4cb6255db13b06fe8, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1594399700}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: SetDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 68bf6d0ae9b427948acc01a635b6c844, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1594399700}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: RemoveItemFromInventory
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: out_key
-          m_BoolArgument: 1
-        m_CallState: 2
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 564643454}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1594399700}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 68bf6d0ae9b427948acc01a635b6c844, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1594399700}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Living Room
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &110299379
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,65 +450,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 110299383}
-        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-        m_MethodName: Unlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1466477957}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1092931067}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: e6add81303ebba941b86f70356549d8b, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1466477957}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   dylanDestinationNode: {fileID: 619972527}
   casperDestinationNode: {fileID: 67073803}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 110299382}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1092931067}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: e6add81303ebba941b86f70356549d8b, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!1 &160139174
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,115 +546,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1416895178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &404384321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 404384322}
-  - component: {fileID: 404384325}
-  - component: {fileID: 404384324}
-  - component: {fileID: 404384323}
-  m_Layer: 0
-  m_Name: Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &404384322
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404384321}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.26, y: 1, z: 0.6}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 720175639}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &404384323
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404384321}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &404384324
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404384321}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a56ebcffb36f74b4282f152911eca419, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &404384325
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404384321}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &421179431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &564643455
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1213,11 +1073,11 @@ Transform:
   m_GameObject: {fileID: 564643454}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.87436056, y: -0.23362637, z: 1}
-  m_LocalScale: {x: 0.05, y: 0.050000012, z: 0.050000012}
+  m_LocalPosition: {x: 0.87436056, y: -0.23362637, z: 2}
+  m_LocalScale: {x: 0.05, y: 0.050000016, z: 0.050000016}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 720175639}
+  m_Father: {fileID: 78302820}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &579653749
 GameObject:
@@ -1439,128 +1299,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1416895178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &720175638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 720175639}
-  - component: {fileID: 720175641}
-  - component: {fileID: 720175640}
-  m_Layer: 0
-  m_Name: Door (unlocked)
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &720175639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720175638}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5323606, y: 0.24962616, z: -0.9778776}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 404384322}
-  - {fileID: 564643458}
-  m_Father: {fileID: 2014402936}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &720175640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720175638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb9f96e2f906cd419f3f5e6a5f3deb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1594399700}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Interior 1
-          m_BoolArgument: 0
-        m_CallState: 2
-  dylanDestinationNode: {fileID: 1452270229}
-  casperDestinationNode: {fileID: 687651537}
-  itemKey: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
-  onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!60 &720175641
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720175638}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.0526514, y: 2.387545}
-      - {x: -0.616108, y: 1.7444193}
-      - {x: -0.5878143, y: -2.7707396}
-      - {x: 1.0662404, y: -1.7181149}
-  m_UseDelaunayMesh: 0
 --- !u!1 &784533964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1312,7 @@ GameObject:
   - component: {fileID: 784533967}
   - component: {fileID: 784533966}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2707,41 +2445,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1594399700}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
-          m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1466477960}
-        m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-        m_MethodName: DestroyPNCObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1466477960}
-          m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1594399700}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: AddItemToInventory
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: a687b5b7f0ba79d409f262b42f137bdd, type: 2}
+            m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1466477960}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: DestroyPNCObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1466477960}
+            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 619972527}
   casperDestinationNode: {fileID: 67073803}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!4 &1486331713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6706383220102595070, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
@@ -3420,8 +3157,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 110299380}
-  - {fileID: 78302820}
-  - {fileID: 720175639}
   m_Father: {fileID: 1453296171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067656098
@@ -3452,7 +3187,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 78302820}
   m_Father: {fileID: 1453296171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090016315
