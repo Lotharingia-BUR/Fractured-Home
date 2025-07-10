@@ -729,7 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112414062}
   m_Layer: 0
-  m_Name: Computer B
+  m_Name: Computer A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1908,7 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403915550}
   m_Layer: 0
-  m_Name: Node 26
+  m_Name: Poster2 B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2650,7 +2650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572887617}
   m_Layer: 0
-  m_Name: Node 30
+  m_Name: Bed A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2717,9 +2717,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: d1eb98e075b0d2c4e92c1dbd8c9b95f7, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 827595061}
+  casperDestinationNode: {fileID: 1034000437}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -4057,7 +4071,7 @@ MonoBehaviour:
   conditionKeys:
   - Parents_Kitchen
   conditionValues:
-  - isCollected: 0
+  - isCollected: 1
     isUnlocked: 1
 --- !u!4 &834780960
 Transform:
@@ -5528,7 +5542,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 7b23e9a432df86c4daf44c95e2357794, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 1159446575}
   casperDestinationNode: {fileID: 1427096313}
   itemKey: {fileID: 0}
@@ -6097,7 +6125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259674959}
   m_Layer: 0
-  m_Name: Node 30
+  m_Name: Bed B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6348,9 +6376,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: fb967d3637fb0af41a05c3a91f671c06, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 572887617}
+  casperDestinationNode: {fileID: 1259674959}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -6874,12 +6916,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 1e17ac9e05452444bb022312c9e87d91, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 827595061}
   casperDestinationNode: {fileID: 1034000437}
   itemKey: {fileID: 11400000, guid: 401e43eeca62aea40b162122c17e8b8d, type: 2}
   onUnlockedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: ca705f898fa73b74c91cfdfbbee1cc4f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: FadeOut
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1411863531}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: DestroyPNCObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1411863531}
+            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   onInteractUnlockedEvent:
     events: []
 --- !u!1 &1419109673
@@ -6928,9 +7026,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: b2c9b0e0bb40ede46976f76dbceea97c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 1163834512}
+  casperDestinationNode: {fileID: 1544606182}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -7323,9 +7435,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 21c86b15312feb744a8074cb8e6ff93a, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 572887617}
+  casperDestinationNode: {fileID: 1259674959}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -8432,9 +8558,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 180aa51fb17d21848844a807e4c8a3dd, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 827595061}
+  casperDestinationNode: {fileID: 1034000437}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -8538,7 +8678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716568179}
   m_Layer: 0
-  m_Name: Node 26
+  m_Name: Poster2 A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9508,9 +9648,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 36268fa3d4b9c5f48812f072f4221f32, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 1716568179}
+  casperDestinationNode: {fileID: 403915550}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -9836,9 +9990,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 446b8718d3483c247930908c18e81c1f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 112414062}
+  casperDestinationNode: {fileID: 1469529234}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -10129,7 +10297,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: c7ab7ad14c48eb346b6f1a2735c714da, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 1124298845}
   casperDestinationNode: {fileID: 1670872665}
   itemKey: {fileID: 0}
