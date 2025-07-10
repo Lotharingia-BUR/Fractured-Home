@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using UnityEditor.IMGUI.Controls;
+using UnityEditorInternal;
+
 
 
 #if UNITY_EDITOR
@@ -29,7 +31,7 @@ public class BoundedFollowCamera : MonoBehaviour
 
         _viewportHalfSize = new(followCamera.aspect * followCamera.orthographicSize, followCamera.orthographicSize);
 
-        bounds.extents -= _viewportHalfSize + Vector3.one;
+        bounds.extents -= _viewportHalfSize;
 
         Vector3 desiredPosition = target.position + new Vector3(offset.x, offset.y, transform.position.z);
         desiredPosition.x = Mathf.Clamp(desiredPosition.x, bounds.min.x, bounds.max.x);
@@ -71,7 +73,7 @@ public class BoundedFollowCamera : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < duration)
         {
-            _shakeOffset = Random.insideUnitCircle * intensity;
+            _shakeOffset = new(Random.Range(-intensity, intensity), 0f);
             elapsed += Time.deltaTime;
             yield return null;
         }
