@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
     //   private Button _saveBtn;
     //   private Button _settingsBtn;
     //   private Button _creditsBtn;
-    //   private Button _exitBtn;
+    //   private Button _quitBtn;
 
     private void Awake()
     {
@@ -32,11 +32,11 @@ public class MainMenuController : MonoBehaviour
     private void StartBtnOnClicked()
     {
         
-        SceneManager.LoadScene("Lawn"); //load main scene
+        SceneManager.LoadScene("Main"); //load main scene
     }
 }
         //_saveBtn = _doc.rootVisualElement.Q<Button>("SaveBtn");
        // _settingsBtn = _doc.rootVisualElement.Q<Button>("SettingsBtn");
-       // _exitBtn = _doc.rootVisualElement.Q<Button>("ExitBtn");
+       // _quitBtn = _doc.rootVisualElement.Q<Button>("ExitBtn");
   //  }
 //}

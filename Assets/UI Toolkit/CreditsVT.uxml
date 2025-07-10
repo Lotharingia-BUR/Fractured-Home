@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=29e2f85599a79d9489987c524228c727&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" class="header" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Assets/MMbackground.png?fileID=2800000&amp;guid=808c5ddae5c801048b6caddd483a1e16&amp;type=3#MMbackground&quot;);">
+        <ui:Label text="Credits" name="Header" class="header" />
+        <ui:GroupBox name="CreditList">
+            <ui:Label text="Label" name="TeamMember1" class="main-menu-btn" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
