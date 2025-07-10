@@ -7417,7 +7417,7 @@ GameObject:
   - component: {fileID: 1527966294}
   - component: {fileID: 1527966293}
   m_Layer: 0
-  m_Name: Window
+  m_Name: Window_Attic
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
