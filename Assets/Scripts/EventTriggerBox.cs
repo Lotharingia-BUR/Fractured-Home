@@ -49,7 +49,7 @@ public class EventTriggerBox : MonoBehaviour
     {
         StartCoroutine(onTriggerEvent.Run());
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitUntil(() => !onTriggerEvent.isRunning);
 
         if (triggerOnce)
         {

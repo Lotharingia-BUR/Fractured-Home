@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -34,8 +35,7 @@ public class ConditionalEvent : MonoBehaviour
         TriggerObjectState state = PersistentObjectStateManager.Instance.GetTriggerState(triggerID);
         if (state.wasTriggered)
         {
-            StartCoroutine(onReloadedEvent.Run());
-            Destroy(this);
+            StartCoroutine(EventCoroutine(new GameplayEvent[] { onReloadedEvent }));
         }
     }
 
@@ -55,11 +55,24 @@ public class ConditionalEvent : MonoBehaviour
 
         if (conditionsMet)
         {
-            StartCoroutine(onConditionMetEvent.Run());
-            StartCoroutine(onReloadedEvent.Run());
-            PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-            Destroy(this);
+            StartCoroutine(EventCoroutine(new GameplayEvent[] { onConditionMetEvent, onReloadedEvent }));
         }
+    }
+
+    private IEnumerator EventCoroutine(GameplayEvent[] gEvents)
+    {
+        foreach (GameplayEvent e in gEvents)
+        {
+            StartCoroutine(e.Run());
+        }
+
+        foreach (GameplayEvent e in gEvents)
+        {
+            yield return new WaitUntil(() => !e.isRunning);
+        }
+
+        PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
+        Destroy(this);
     }
 }
 
