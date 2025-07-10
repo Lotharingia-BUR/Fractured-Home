@@ -1,11 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using Unity.VisualScripting;
-
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class PointAndClickObject : Interactable
 {
@@ -67,6 +61,8 @@ public class PointAndClickObject : Interactable
 
     protected override void OnClicked()
     {
+        if (PauseModeManager.Instance.pauseMode != PauseMode.Unpaused) { return; }
+
         _dylan.SetDestination(this, dylanDestinationNode);
         _casper.SetDestination(this, casperDestinationNode);
     }
@@ -99,21 +95,3 @@ public class PointAndClickObject : Interactable
         StartCoroutine(onUnlockedEvent.Run());
     }
 }
-
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(PointAndClickObject)), CanEditMultipleObjects]
-public class PointAndClickObjectEditor : Editor
-{
-    private SerializedProperty _interactLockedEvent;
-    private SerializedProperty _interactUnlockedEvent;
-    private SerializedProperty _unlockedEvent;
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-
-    }
-}
-#endif
