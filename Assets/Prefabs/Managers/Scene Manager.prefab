@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510e01273921c1f459442a10d0b6837e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 5688b55a79bfe494bb2c19464c8faacf, type: 3}
-  interactiveCursor: {fileID: 2800000, guid: 08705ad96073d1d429ca2a97a99ca8de, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 420834e1440c6754c8736d99cefc2a9d, type: 3}
+  interactiveCursor: {fileID: 2800000, guid: 78a8191431c747c43b4aa8db6299489f, type: 3}
   clickedCursor: {fileID: -6527069497977903076, guid: 108dbe9f2d173074393421a323152769, type: 3}
   draggedItem: {fileID: 0}
 --- !u!114 &1600120973806947288
