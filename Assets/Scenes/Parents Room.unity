@@ -1355,29 +1355,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1671181074}
-        m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Interior 1
-          m_BoolArgument: 0
-        m_CallState: 2
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Living Room
+            m_BoolArgument: 0
+          m_CallState: 2
   dylanDestinationNode: {fileID: 981622285}
   casperDestinationNode: {fileID: 1458312464}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &260738093
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1538,17 +1537,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &279474677
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4362,17 +4358,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &881209500
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6969,17 +6962,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &1483072623
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7599,17 +7589,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &1585986525
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8651,17 +8638,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &1735585821
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10455,17 +10439,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   dylanDestinationNode: {fileID: 0}
   casperDestinationNode: {fileID: 0}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
   onInteractUnlockedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    events: []
 --- !u!60 &2017153480
 PolygonCollider2D:
   m_ObjectHideFlags: 0
