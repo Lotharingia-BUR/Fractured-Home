@@ -39,9 +39,12 @@ public class EventTriggerBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (eventCoroutine == null && collision.GetComponent<PointAndClickCharacterController>() != null)
+        PointAndClickCharacterController chara = collision.GetComponent<PointAndClickCharacterController>();
+        if (chara != null)
         {
-            eventCoroutine = StartCoroutine(EventCoroutine());
+            chara.EndCurrentPath();
+
+            if (eventCoroutine == null) { eventCoroutine = StartCoroutine(EventCoroutine()); }
         }
     }
 

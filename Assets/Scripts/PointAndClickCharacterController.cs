@@ -1,5 +1,6 @@
 using System.Collections;
 using Pathfinding;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,6 +14,8 @@ public class PointAndClickCharacterController : MonoBehaviour
     private float _currentSpeed;
     private Vector3 _currentVelocity;
     private float _acceleration;
+
+    private bool _interruptMovement;
 
     private Coroutine _movementOverrideCoroutine = null;
     private Coroutine _currentlyFollowingPath = null;
@@ -41,10 +44,16 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(Vector2 destination)
     {
-        if (_movementOverrideCoroutine != null || _currentlyFollowingPath != null) { return; }
+        StartCoroutine(SetDestinationCoroutine(destination));
+    }
+
+    private IEnumerator SetDestinationCoroutine(Vector2 destination)
+    {
+        EndCurrentPath();
+
+        yield return new WaitUntil(() => _currentlyFollowingPath == null);
 
         Vector3 targetPos = new Vector3(destination.x, destination.y, transform.position.z);
-
         _seeker.StartPath(transform.position, targetPos, OnPathComplete);
     }
 
@@ -90,9 +99,15 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     private void StartNewPath()
     {
-        if (_currentlyFollowingPath != null) { return; }
-
         _currentlyFollowingPath = StartCoroutine(FollowPath());
+    }
+
+    public void EndCurrentPath()
+    {
+        if (_currentlyFollowingPath != null)
+        {
+            _interruptMovement = true;
+        }
     }
 
     private IEnumerator FollowPath()
@@ -124,6 +139,20 @@ public class PointAndClickCharacterController : MonoBehaviour
                 } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
 
                 Debug.Log($"Reached node {i} of {_path.path.Count - 1}");
+
+                if (_interruptMovement)
+                {
+                    _interruptMovement = false;
+
+                    StopCoroutine(_currentlyFollowingPath);
+                    _currentlyFollowingPath = null;
+
+                    if (_movementOverrideCoroutine != null)
+                    {
+                        StopCoroutine(_movementOverrideCoroutine);
+                        _movementOverrideCoroutine = null;
+                    }
+                }
             }
 
             currentLine = (Vector3)(_path.endNode.position - _path.path[_path.path.Count - 2].position);
