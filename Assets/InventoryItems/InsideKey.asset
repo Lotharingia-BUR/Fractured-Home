@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InsideKey
   m_EditorClassIdentifier: 
   id: in_key
-  sprite: {fileID: 21300000, guid: 14355d1f54675aa409cfac65521ecbed, type: 3}
+  sprite: {fileID: 21300000, guid: 904b439818a44504d806cfe2cee7af2a, type: 3}

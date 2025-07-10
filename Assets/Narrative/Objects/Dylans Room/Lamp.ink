@@ -1,3 +1,3 @@
-Its empty...
+You flick the switch but nothing happens
 
     -> END
