@@ -16,8 +16,8 @@ public class PointAndClickObject : Interactable
     private PointAndClickCharacterController _casper;
 
     public InventoryItem itemKey;
-    public UnityEvent onUnlockedEvent;
-    public UnityEvent onInteractUnlockedEvent;
+    public GameplayEvent onUnlockedEvent;
+    public GameplayEvent onInteractUnlockedEvent;
 
     private bool _isUnlocked = false;
 
@@ -31,7 +31,7 @@ public class PointAndClickObject : Interactable
         _isUnlocked = savedState.isUnlocked;
         if (_isUnlocked)
         {
-            onUnlockedEvent.Invoke();
+            StartCoroutine(onUnlockedEvent.Run());
         }
     }
 
@@ -83,7 +83,7 @@ public class PointAndClickObject : Interactable
             }
             else
             {
-                onInteractUnlockedEvent.Invoke();
+                StartCoroutine(onInteractUnlockedEvent.Run());
             }
         }
         else
@@ -96,7 +96,7 @@ public class PointAndClickObject : Interactable
     {
         _isUnlocked = true;
         PersistentObjectStateManager.Instance.SaveObjectState(gameObject.name, false, true);
-        onUnlockedEvent.Invoke();
+        StartCoroutine(onUnlockedEvent.Run());
     }
 }
 

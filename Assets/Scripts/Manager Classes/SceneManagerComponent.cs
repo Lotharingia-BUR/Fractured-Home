@@ -22,9 +22,23 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
         _fadeOutHash = Animator.StringToHash("FadeOut");
     }
 
+    public void FadeOut(float duration) => StartCoroutine(FadeOutCoroutine(duration));
+
+    private IEnumerator FadeOutCoroutine(float duration)
+    {
+        _animator.SetTrigger(_fadeOutHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
+
+        yield return new WaitForSeconds(duration);
+
+        _animator.SetTrigger(_fadeInHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
+    }
+
     private IEnumerator SceneTransition(string sceneName)
     {
         _animator.SetTrigger(_fadeOutHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
 
         yield return new WaitForSeconds(1f);
 
@@ -33,11 +47,13 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
         yield return new WaitForSeconds(transitionTime);
 
         _animator.SetTrigger(_fadeInHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
     }
 
     private IEnumerator SceneTransition(int sceneID)
     {
         _animator.SetTrigger(_fadeOutHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
 
         yield return new WaitForSeconds(1f);
 
@@ -46,6 +62,7 @@ public class SceneManagerComponent : Manager<SceneManagerComponent>
         yield return new WaitForSeconds(transitionTime);
 
         _animator.SetTrigger(_fadeInHash);
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
     }
 
     public void LoadScene(string sceneName) => StartCoroutine(SceneTransition(sceneName));

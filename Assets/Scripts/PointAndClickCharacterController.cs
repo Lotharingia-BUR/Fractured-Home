@@ -41,7 +41,7 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(Vector2 destination)
     {
-        if (_movementOverrideCoroutine != null) { return; }
+        if (_movementOverrideCoroutine != null || _currentlyFollowingPath != null) { return; }
 
         Vector3 targetPos = new Vector3(destination.x, destination.y, transform.position.z);
 
@@ -90,10 +90,7 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     private void StartNewPath()
     {
-        if (_currentlyFollowingPath != null)
-        {
-            StopCoroutine(_currentlyFollowingPath);
-        }
+        if (_currentlyFollowingPath != null) { return; }
 
         _currentlyFollowingPath = StartCoroutine(FollowPath());
     }

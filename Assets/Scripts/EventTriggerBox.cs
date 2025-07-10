@@ -8,7 +8,7 @@ public class EventTriggerBox : MonoBehaviour
     [Tooltip("Whether the event should only trigger once ever or the player should be able to re-trigger it by re-entering the trigger area")]
     public bool triggerOnce = true;
 
-    public UnityEvent onTriggerEvent;
+    public GameplayEvent onTriggerEvent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,7 +38,7 @@ public class EventTriggerBox : MonoBehaviour
     {
         if (collision.GetComponent<PointAndClickCharacterController>() != null)
         {
-            onTriggerEvent?.Invoke();
+            StartCoroutine(onTriggerEvent.Run());
 
             if (triggerOnce)
             {

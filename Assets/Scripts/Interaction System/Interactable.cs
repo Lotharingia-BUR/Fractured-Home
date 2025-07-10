@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Interactable : MonoBehaviour
 {
     // Unity event to run on interaction
-    public UnityEvent onInteractedEvent;
+    public GameplayEvent onInteractedEvent;
 
     void OnMouseDown()
     {
@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
         }
         else
         {
-            onInteractedEvent.Invoke();
+            StartCoroutine(onInteractedEvent.Run());
         }
     }
 }
