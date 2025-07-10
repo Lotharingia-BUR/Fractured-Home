@@ -99,47 +99,50 @@ public class PointAndClickCharacterController : MonoBehaviour
     {
         yield return new WaitUntil(() => _path != null);
 
-        Vector3 currentLine;
-
-        float distanceOnLine;
-
-        for (int i = 1; i < _path.path.Count - 1; i++)
+        if (_path.path.Count > 1)
         {
-            currentLine = (Vector3)(_path.path[i].position - _path.path[i - 1].position);
-            _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
+            Vector3 currentLine;
 
+            float distanceOnLine;
+
+            for (int i = 1; i < _path.path.Count - 1; i++)
+            {
+                currentLine = (Vector3)(_path.path[i].position - _path.path[i - 1].position);
+                _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
+
+                distanceOnLine = 0f;
+                do
+                {
+                    _currentSpeed = Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed);
+                    _currentVelocity = _currentSpeed * currentLine.normalized;
+
+                    distanceOnLine += _currentSpeed * Time.deltaTime;
+
+                    transform.position = Vector3.Lerp((Vector3)_path.path[i - 1].position, (Vector3)_path.path[i].position, distanceOnLine / currentLine.magnitude);
+
+                    yield return null;
+                } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
+
+                Debug.Log($"Reached node {i} of {_path.path.Count - 1}");
+            }
+
+            currentLine = (Vector3)(_path.endNode.position - _path.path[_path.path.Count - 2].position);
+            _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
             distanceOnLine = 0f;
             do
             {
-                _currentSpeed = Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed);
-                _currentVelocity = _currentSpeed * currentLine.normalized;
+                float decelerationDistance = -Mathf.Pow(_currentSpeed, 2f) / (2 * -_acceleration);
+                _currentSpeed = currentLine.magnitude - distanceOnLine > decelerationDistance ? Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed) : _currentSpeed - _acceleration * Time.deltaTime;
 
                 distanceOnLine += _currentSpeed * Time.deltaTime;
 
-                transform.position = Vector3.Lerp((Vector3)_path.path[i - 1].position, (Vector3)_path.path[i].position, distanceOnLine / currentLine.magnitude);
+                transform.position = Vector3.Lerp((Vector3)_path.path[_path.path.Count - 2].position, (Vector3)_path.endNode.position, distanceOnLine / currentLine.magnitude);
 
                 yield return null;
             } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
 
-            Debug.Log($"Reached node {i} of {_path.path.Count - 1}");
+            Debug.Log($"Reached final node of path");
         }
-
-        currentLine = (Vector3)(_path.endNode.position - _path.path[_path.path.Count - 2].position);
-        _currentSpeed = Vector3.Dot(_currentVelocity, currentLine) / currentLine.magnitude;
-        distanceOnLine = 0f;
-        do
-        {
-            float decelerationDistance = -Mathf.Pow(_currentSpeed, 2f) / (2 * -_acceleration);
-            _currentSpeed = currentLine.magnitude - distanceOnLine > decelerationDistance ? Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed) : _currentSpeed - _acceleration * Time.deltaTime;
-
-            distanceOnLine += _currentSpeed * Time.deltaTime;
-
-            transform.position = Vector3.Lerp((Vector3)_path.path[_path.path.Count - 2].position, (Vector3)_path.endNode.position, distanceOnLine / currentLine.magnitude);
-
-            yield return null;
-        } while (distanceOnLine < currentLine.magnitude - nodeReachedDistance);
-
-        Debug.Log($"Reached final node of path");
 
         _currentlyFollowingPath = null;
     }

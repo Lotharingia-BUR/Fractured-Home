@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -38,13 +39,20 @@ public class EventTriggerBox : MonoBehaviour
     {
         if (collision.GetComponent<PointAndClickCharacterController>() != null)
         {
-            StartCoroutine(onTriggerEvent.Run());
+            StartCoroutine(EventCoroutine());
+        }
+    }
 
-            if (triggerOnce)
-            {
-                PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-                Destroy(gameObject);
-            }
+    private IEnumerator EventCoroutine()
+    {
+        var c = StartCoroutine(onTriggerEvent.Run());
+
+        yield return new WaitUntil(() => c == null);
+
+        if (triggerOnce)
+        {
+            PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
+            Destroy(gameObject);
         }
     }
 }
