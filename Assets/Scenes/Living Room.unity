@@ -7663,25 +7663,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 844099953637691264, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1829627568376423627, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_Name
       value: Inventory Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 5554835244817762827, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: a2a0bcc0aad6df044bf7516c2ea3fc1a, type: 2}
-    - target: {fileID: 5554835244817762827, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136000552329852607, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9058402103652720153, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_Pivot.x
