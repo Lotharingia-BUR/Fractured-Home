@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using UnityEditor.IMGUI.Controls;
+using UnityEditorInternal;
+
 
 
 #if UNITY_EDITOR
@@ -60,21 +62,23 @@ public class BoundedFollowCamera : MonoBehaviour
         transform.position = smoothedPosition;
     }
 
-    public void Shake(float intensity, float duration)
+    public void Shake(float intensity)
     {
-        StartCoroutine(ShakeCoroutine(intensity, duration));
+        StartCoroutine(ShakeCoroutine(intensity, 1f));
     }
 
     private IEnumerator ShakeCoroutine(float intensity, float duration)
     {
+        PauseModeManager.Instance.SetPauseMode(PauseMode.FadeOut);
         float elapsed = 0f;
         while (elapsed < duration)
         {
-            _shakeOffset = Random.insideUnitCircle * intensity;
+            _shakeOffset = new(Random.Range(-intensity, intensity), 0f);
             elapsed += Time.deltaTime;
             yield return null;
         }
         _shakeOffset = Vector3.zero;
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
     }
 
     void OnDrawGizmosSelected()

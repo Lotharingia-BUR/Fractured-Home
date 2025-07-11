@@ -32,7 +32,7 @@ public class MainMenuController : MonoBehaviour
     private void StartBtnOnClicked()
     {
         
-        SceneManager.LoadScene("Main"); //load main scene
+        SceneManager.LoadScene("Lawn"); //load main scene
     }
 }
         //_saveBtn = _doc.rootVisualElement.Q<Button>("SaveBtn");

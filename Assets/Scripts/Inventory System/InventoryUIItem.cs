@@ -39,7 +39,8 @@ public class InventoryUIItem : UIHoverable
     {
         if (used)
         {
-            Destroy(gameObject);
+            _image.enabled = false;
+            InventoryManager.Instance.RemoveItem(item);
         }
         else
         {

@@ -7,7 +7,8 @@ using UnityEngine;
 public enum PauseMode
 {
     Unpaused,
-    Dialogue
+    Dialogue,
+    FadeOut
 }
 
 //Pause Mode Manager
@@ -48,6 +49,30 @@ public class PauseModeManager : Manager<PauseModeManager>
                 {
                     v.enabled = false;
                 }
+
+                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+                break;
+
+            case PauseMode.FadeOut:
+                dialogueBox.SetActive(false);
+
+                foreach (var v in FindObjectsByType<PointAndClickCharacterController>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<Interactable>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
                 break;
 
             case PauseMode.Unpaused:
@@ -60,6 +85,11 @@ public class PauseModeManager : Manager<PauseModeManager>
                 }
 
                 foreach (var v in FindObjectsByType<Interactable>(FindObjectsSortMode.None))
+                {
+                    v.enabled = true;
+                }
+
+                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
                 {
                     v.enabled = true;
                 }

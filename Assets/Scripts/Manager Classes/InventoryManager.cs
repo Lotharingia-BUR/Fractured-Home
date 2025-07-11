@@ -13,9 +13,13 @@ public class InventoryManager : Manager<InventoryManager>
 
     public event System.Action inventoryChanged;
 
+    private InventoryDrawer _inventoryDrawer;
+
     protected override void Initialize()
     {
         base.Initialize();
+
+        _inventoryDrawer = GetComponentInChildren<InventoryDrawer>(true);
 
         inventoryChanged += UpdateItemSlots;
 
@@ -60,6 +64,8 @@ public class InventoryManager : Manager<InventoryManager>
 
     public void AddItem(InventoryItem inItem)
     {
+        _inventoryDrawer.SetToggle(true);
+
         inventory.Add(inItem);
 
         Debug.Log(inItem.id + " added to inventory");
@@ -69,15 +75,17 @@ public class InventoryManager : Manager<InventoryManager>
 
     public void RemoveItem(string itemID)
     {
+        Debug.Log("REMOVE ITEM");
         foreach (InventoryItem item in inventory)
         {
             if (item.id == itemID)
             {
                 inventory.Remove(item);
+
+                Debug.Log(item.id + " removed from inventory");
                 return;
             }
         }
-
         OnInventoryChanged();
     }
 
@@ -103,5 +111,11 @@ public class InventoryManager : Manager<InventoryManager>
     public bool HasItem(InventoryItem inItem)
     {
         return !inventory.TrueForAll((InventoryItem item) => item.id != inItem.id);
+    }
+
+    public void ResetState()
+    {
+        _inventoryDrawer.SetToggle(false);
+        UpdateItemSlots();
     }
 }
