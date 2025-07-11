@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8159972617036264881}
   - component: {fileID: 7376147344061378321}
   - component: {fileID: 5537665650254981190}
+  - component: {fileID: 7558908225085896246}
   m_Layer: 6
   m_Name: Cat
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: -4, z: 3}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalScale: {x: -0.85, y: 0.85, z: 0.85}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3189614906412084889}
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   accelerationTime: 0.3
-  nodeReachedDistance: 0.01
+  nodeReachedDistance: 0.05
 --- !u!60 &8159972617036264881
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -188,6 +189,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &7558908225085896246
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007479862896111013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f39142aac73e635438446226131198b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7948371981202496995
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd10cd0d51e4ca14eaff779eba1aa5ad, type: 2}
+  - {fileID: 2100000, guid: 807f081103ae19243bcf84aff90b9cfd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

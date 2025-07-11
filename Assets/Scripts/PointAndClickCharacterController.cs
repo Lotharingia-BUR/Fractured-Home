@@ -2,10 +2,16 @@ using System.Collections;
 using Pathfinding;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
 public class PointAndClickCharacterController : MonoBehaviour
 {
+    public enum FacingDirection
+    {
+        Left = -1, Right = 1
+    }
+
     public float maxSpeed = 5f;
     public float accelerationTime = 0.2f;
 
@@ -15,6 +21,7 @@ public class PointAndClickCharacterController : MonoBehaviour
     private Vector3 _currentVelocity;
     private float _acceleration;
 
+    private FacingDirection _facingDirection = FacingDirection.Left;
     private bool _interruptMovement;
 
     private Coroutine _movementOverrideCoroutine = null;
@@ -23,13 +30,36 @@ public class PointAndClickCharacterController : MonoBehaviour
     private ABPath _path;
 
     private Seeker _seeker;
+    private Animator _animator;
+
+    private int _speedHash;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _seeker = GetComponent<Seeker>();
+        _animator = GetComponent<Animator>();
+
+        _speedHash = Animator.StringToHash("speed");
 
         _acceleration = maxSpeed / accelerationTime;
+    }
+
+    void OnDisable()
+    {
+        _currentSpeed = 0f;
+        _currentVelocity = Vector3.zero;
+        if (_movementOverrideCoroutine != null)
+        {
+            StopCoroutine(_movementOverrideCoroutine);
+            _movementOverrideCoroutine = null;
+        }
+        if (_currentlyFollowingPath != null)
+        {
+            StopCoroutine(_currentlyFollowingPath);
+            _currentlyFollowingPath = null;
+        }
+        AnimUpdate();
     }
 
     // Update is called once per frame
@@ -40,6 +70,24 @@ public class PointAndClickCharacterController : MonoBehaviour
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetDestination(mouseWorldPos);
         }
+
+        AnimUpdate();
+    }
+
+    private void AnimUpdate()
+    {
+        if (_facingDirection == FacingDirection.Right && _currentVelocity.x > 0.01f)
+        {
+            _facingDirection = FacingDirection.Left;
+            transform.localScale = new(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        else if (_facingDirection == FacingDirection.Left && _currentVelocity.x < -0.01f)
+        {
+            _facingDirection = FacingDirection.Right;
+            transform.localScale = new(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+
+        _animator.SetFloat(_speedHash, _currentSpeed);
     }
 
     void OnMouseDown()
@@ -74,6 +122,8 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(PointAndClickObject sender, Transform destinationNode)
     {
+        if (_movementOverrideCoroutine != null || _currentlyFollowingPath != null) { return; }
+
         if (destinationNode != null)
         {
             SetDestination(destinationNode.position);
@@ -94,6 +144,7 @@ public class PointAndClickCharacterController : MonoBehaviour
         yield return new WaitUntil(() => _path != null);
 
         yield return new WaitUntil(() => _currentlyFollowingPath == null);
+        yield return new WaitForEndOfFrame();
 
         if (pncObject != null) { pncObject.SendMessage("ObjectReached", gameObject.name); }
 
@@ -125,6 +176,11 @@ public class PointAndClickCharacterController : MonoBehaviour
         if (_currentlyFollowingPath != null)
         {
             _interruptMovement = true;
+        }
+
+        if (_movementOverrideCoroutine != null)
+        {
+            StopCoroutine(_movementOverrideCoroutine);
         }
     }
 
@@ -161,15 +217,12 @@ public class PointAndClickCharacterController : MonoBehaviour
                 if (_interruptMovement)
                 {
                     _interruptMovement = false;
+                    _currentSpeed = 0f;
+                    _currentVelocity = Vector3.zero;
 
-                    StopCoroutine(_currentlyFollowingPath);
+                    Coroutine temp = _currentlyFollowingPath;
                     _currentlyFollowingPath = null;
-
-                    if (_movementOverrideCoroutine != null)
-                    {
-                        StopCoroutine(_movementOverrideCoroutine);
-                        _movementOverrideCoroutine = null;
-                    }
+                    StopCoroutine(temp);
                 }
             }
 
@@ -190,6 +243,9 @@ public class PointAndClickCharacterController : MonoBehaviour
 
             Debug.Log($"Reached final node of path");
         }
+
+        _currentSpeed = 0f;
+        _currentVelocity = Vector3.zero;
 
         _currentlyFollowingPath = null;
     }
