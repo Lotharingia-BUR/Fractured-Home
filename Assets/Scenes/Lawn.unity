@@ -1517,7 +1517,7 @@ PrefabInstance:
       objectReference: {fileID: 522325728}
     - target: {fileID: 8099104330355625323, guid: 0fc98245ed2eff34f8c01b50a938e4ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.290001
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8099104330355625323, guid: 0fc98245ed2eff34f8c01b50a938e4ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2682,7 +2682,7 @@ Transform:
   m_GameObject: {fileID: 801108683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.42, y: -3.14, z: 2.16}
+  m_LocalPosition: {x: -4.67, y: -3.14, z: 2.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6850,6 +6850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 4070742406058530589, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4727275586972520249, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7024,6 +7028,10 @@ PrefabInstance:
     - target: {fileID: 1193872144135016039, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
       propertyPath: m_Name
       value: Dylan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125333191947777309, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
