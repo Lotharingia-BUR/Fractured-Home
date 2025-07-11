@@ -6784,6 +6784,7 @@ GameObject:
   - component: {fileID: 1411863530}
   - component: {fileID: 1411863529}
   - component: {fileID: 1411863531}
+  - component: {fileID: 1411863532}
   m_Layer: 0
   m_Name: Dad_DylansRoom
   m_TagString: Interactable
@@ -6888,6 +6889,28 @@ MonoBehaviour:
     events: []
   onInteractUnlockedEvent:
     events: []
+--- !u!95 &1411863532
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411863528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42e6323cdf7971c4c862c63b7376f053, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1419109673
 GameObject:
   m_ObjectHideFlags: 0

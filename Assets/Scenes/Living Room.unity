@@ -5060,6 +5060,7 @@ GameObject:
   - component: {fileID: 352100609}
   - component: {fileID: 352100610}
   - component: {fileID: 352100611}
+  - component: {fileID: 352100612}
   m_Layer: 0
   m_Name: Parents_Kitchen
   m_TagString: Interactable
@@ -5285,6 +5286,28 @@ MonoBehaviour:
           m_CallState: 2
   onInteractUnlockedEvent:
     events: []
+--- !u!95 &352100612
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352100608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbac7f47d8defe04a9a362463d4d7f3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &354335075
 GameObject:
   m_ObjectHideFlags: 0
