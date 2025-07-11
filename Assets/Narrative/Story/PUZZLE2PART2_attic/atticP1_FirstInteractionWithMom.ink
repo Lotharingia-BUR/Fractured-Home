@@ -4,9 +4,9 @@
 
 Dylan's mother sits in a small corner of the attic, weeping frustration.
 
-Dylan: "Hey mom, I just talked to dad, I was hoping maybe we could talk too?"
+Dylan: "Hey mom, I was hoping maybe we could talk?"
 
-His mother continues to weep, hands balled into fists in her lap as she gazes at an old photo frame.
+His mother ignores him and continues to weep, hands balled into fists in her lap as she gazes at an old photo frame.
 
 //break? Head over and look? idk I'll break it up into two just in case.
 

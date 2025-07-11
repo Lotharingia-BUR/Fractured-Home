@@ -3,7 +3,7 @@
 
 Dylan: "Oh, I remember this photograph. Mom loved it, but it looks like it got ripped up at some point."
 
-Dylan: "Dad did say that I should find a gift or something for mom, maybe I should go look for the other half of this picture first!"
+Dylan: "Maybe I should go look for the other half of this picture first!"
 
 Casper: 'I think I remember seeing it in the living room, I almost slipped on it earlier.'
 
