@@ -1,7 +1,10 @@
 using System.Collections.Generic;
+using UnityEngine;
+
+#if UNITY_EDITOR
 using System.Linq;
 using UnityEditor;
-using UnityEngine;
+#endif
 
 public class CharacterPositionSetter : MonoBehaviour
 {
@@ -35,6 +38,7 @@ public class CharacterPositionSetter : MonoBehaviour
 }
 
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(CharacterPositionSetter)), CanEditMultipleObjects]
 public class CharacterPositionSetterEditor : Editor
 {
@@ -97,3 +101,4 @@ public class CharacterPositionSetterEditor : Editor
         }
     }
 }
+#endif

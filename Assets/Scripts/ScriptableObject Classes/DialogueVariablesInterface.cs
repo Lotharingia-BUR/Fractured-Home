@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 #if UNITY_EDITOR
 using UnityEditor;
-#endif
 
 [CreateAssetMenu(fileName = "DialogueVariablesInterface", menuName = "Scriptable Objects/DialogueVariablesInterface")]
 public class DialogueVariablesInterface : ScriptableObject
@@ -29,7 +28,6 @@ public class DialogueVariablesInterface : ScriptableObject
 }
 
 
-#if UNITY_EDITOR
 [CustomEditor(typeof(DialogueVariablesInterface)), CanEditMultipleObjects]
 public class DialogueVariablesInterfaceEditor : Editor
 {
