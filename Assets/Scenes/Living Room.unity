@@ -7671,6 +7671,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 5554835244817762827, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a2a0bcc0aad6df044bf7516c2ea3fc1a, type: 2}
+    - target: {fileID: 5554835244817762827, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7136000552329852607, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_IsActive
       value: 1
