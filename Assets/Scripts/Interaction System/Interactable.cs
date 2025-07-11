@@ -1,13 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
 public class Interactable : MonoBehaviour
 {
     // Unity event to run on interaction
-    public UnityEvent onInteractedEvent;
+    public GameplayEvent onInteractedEvent;
 
     void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
+
+        OnClicked();
+    }
+
+    public void Click()
     {
         OnClicked();
     }
@@ -20,7 +28,7 @@ public class Interactable : MonoBehaviour
         }
         else
         {
-            onInteractedEvent.Invoke();
+            StartCoroutine(onInteractedEvent.Run());
         }
     }
 }

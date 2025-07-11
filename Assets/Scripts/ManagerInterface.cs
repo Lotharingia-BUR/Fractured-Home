@@ -12,6 +12,8 @@ public class ManagerInterface : MonoBehaviour
         _dialogue = DialogueManager.Instance;
         _inventory = InventoryManager.Instance;
         _scene = SceneManagerComponent.Instance;
+
+        _inventory.ResetState();
     }
 
     public void SetDialogue(TextAsset dialogue) => _dialogue.SetStory(dialogue);
@@ -20,4 +22,5 @@ public class ManagerInterface : MonoBehaviour
     public void RemoveItemFromInventory(InventoryItem item) => _inventory.RemoveItem(item);
     public void LoadScene(string sceneName) => _scene.LoadScene(sceneName);
     public void LoadScene(int sceneID) => _scene.LoadScene(sceneID);
+    public void FadeOut(float duration) => _scene.FadeOut(duration);
 }

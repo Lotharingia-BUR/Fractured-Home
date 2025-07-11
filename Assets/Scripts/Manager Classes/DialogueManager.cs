@@ -8,8 +8,6 @@ using TMPro;
 //Handles reading dialogue from an Ink story asset and writing it to the dialogue box
 public class DialogueManager : Singleton<DialogueManager>
 {
-    //Ink story asset to read dialogue from
-    public TextAsset inkAsset;
     //UI text to write dialogue to
     public TMP_Text mainText;
 
@@ -19,12 +17,9 @@ public class DialogueManager : Singleton<DialogueManager>
     //Currently selected dialogue choice
     private int _selectedChoice = 0;
 
-    protected override void Initialize()
-    {
-        base.Initialize();
+    private float _timeoutTimer = 0f;
 
-        SetStory(inkAsset);
-    }
+    private const float k_timeout = 0.2f;
 
     /// <summary>
     /// Reset the current Ink story and set the given Ink JSON asset as the current story
@@ -51,9 +46,10 @@ public class DialogueManager : Singleton<DialogueManager>
         if (story.canContinue)
         {
             //Play next line of dialogue on interaction
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && _timeoutTimer <= 0f)
             {
                 LoadNextDialogue();
+                _timeoutTimer = k_timeout;
             }
         }
         else if (story.currentChoices.Count > 0)
@@ -82,20 +78,23 @@ public class DialogueManager : Singleton<DialogueManager>
             }
 
             //Select dialogue option on interaction
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && _timeoutTimer <= 0f)
             {
                 story.ChooseChoiceIndex(_selectedChoice);
                 LoadNextDialogue();
+                _timeoutTimer = k_timeout;
             }
         }
         else
         {
             //If there is no more dialogue, resume game on interaction
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && _timeoutTimer <= 0f)
             {
                 ResetStory();
             }
         }
+
+        _timeoutTimer = Mathf.Clamp(_timeoutTimer - Time.deltaTime, 0f, float.PositiveInfinity);
     }
 
     public void LoadNextDialogue()
