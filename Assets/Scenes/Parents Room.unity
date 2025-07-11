@@ -2054,7 +2054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336531244}
   m_Layer: 0
-  m_Name: Node 30
+  m_Name: Parents B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2212,7 +2212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356939693}
   m_Layer: 0
-  m_Name: Node 30
+  m_Name: Parents A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5944,7 +5944,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: aa95f1e7c4b591247a3aa995b566073b, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: edba84acc7f320a4bace3efc43896c98, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -5958,8 +5958,22 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: aa95f1e7c4b591247a3aa995b566073b, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 9257f02caa022ba41a7eed8ae38719fb, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: AddItemToInventory
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 2b9a4fb0bdb24b54a8005ba30560a72f, type: 2}
+            m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5972,15 +5986,43 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: aa95f1e7c4b591247a3aa995b566073b, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 7dcd476f81008bf4bb056ccebebb24ff, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  dylanDestinationNode: {fileID: 0}
-  casperDestinationNode: {fileID: 0}
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2136354182}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 5
+            m_StringArgument: Credits
+            m_BoolArgument: 0
+          m_CallState: 2
+  dylanDestinationNode: {fileID: 356939693}
+  casperDestinationNode: {fileID: 336531244}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -10702,6 +10744,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1533995159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2136354182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1829627568376423627, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
+  m_PrefabInstance: {fileID: 369873975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137322356
 GameObject:
   m_ObjectHideFlags: 0
