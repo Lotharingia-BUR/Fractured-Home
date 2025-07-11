@@ -21,7 +21,7 @@ public class PointAndClickCharacterController : MonoBehaviour
     private Vector3 _currentVelocity;
     private float _acceleration;
 
-    private FacingDirection _facingDirection = FacingDirection.Left;
+    private FacingDirection _facingDirection = FacingDirection.Right;
     private bool _interruptMovement;
 
     private Coroutine _movementOverrideCoroutine = null;
@@ -217,8 +217,6 @@ public class PointAndClickCharacterController : MonoBehaviour
                 if (_interruptMovement)
                 {
                     _interruptMovement = false;
-                    _currentSpeed = 0f;
-                    _currentVelocity = Vector3.zero;
 
                     Coroutine temp = _currentlyFollowingPath;
                     _currentlyFollowingPath = null;
