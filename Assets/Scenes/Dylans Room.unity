@@ -1747,6 +1747,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1292311434}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: pickup
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 322356317}
           m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_MethodName: Unlock
@@ -1799,7 +1811,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: 92860a3b91324664d90a854c65615e6c, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: 4795b5f184da73a4eb9922e879579405, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -6263,6 +6275,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
   m_PrefabInstance: {fileID: 1292311432}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1292311434 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8680459604822035469, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+  m_PrefabInstance: {fileID: 1292311432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1294771803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,7 +6883,7 @@ MonoBehaviour:
           m_CallState: 2
   dylanDestinationNode: {fileID: 827595061}
   casperDestinationNode: {fileID: 1034000437}
-  itemKey: {fileID: 11400000, guid: 401e43eeca62aea40b162122c17e8b8d, type: 2}
+  itemKey: {fileID: 0}
   onUnlockedEvent:
     events:
     - m_PersistentCalls:

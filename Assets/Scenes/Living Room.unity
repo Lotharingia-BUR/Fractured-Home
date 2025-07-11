@@ -2796,6 +2796,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1528247558}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: pickup
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 142404751}
           m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_MethodName: DestroyPNCObject
@@ -18229,6 +18241,11 @@ PrefabInstance:
 --- !u!4 &1528247557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 179389024365474980, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
+  m_PrefabInstance: {fileID: 1528247556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1528247558 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8680459604822035469, guid: 6d741471c1e0c6049b1e8a9c7c3cc23d, type: 3}
   m_PrefabInstance: {fileID: 1528247556}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531503908
