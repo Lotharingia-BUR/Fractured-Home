@@ -47,6 +47,18 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     void OnDisable()
     {
+        _currentSpeed = 0f;
+        _currentVelocity = Vector3.zero;
+        if (_movementOverrideCoroutine != null)
+        {
+            StopCoroutine(_movementOverrideCoroutine);
+            _movementOverrideCoroutine = null;
+        }
+        if (_currentlyFollowingPath != null)
+        {
+            StopCoroutine(_currentlyFollowingPath);
+            _currentlyFollowingPath = null;
+        }
         AnimUpdate();
     }
 
