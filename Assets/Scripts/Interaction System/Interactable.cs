@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject()) { return; }
+        if (PauseModeManager.Instance.pauseMode != PauseMode.Unpaused) { return; }
 
         OnClicked();
     }

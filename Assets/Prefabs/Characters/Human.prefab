@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2307409767724668876}
   - component: {fileID: 400632827811915503}
   - component: {fileID: 8680459604822035469}
+  - component: {fileID: 5675439543025832800}
   m_Layer: 6
   m_Name: Human
   m_TagString: Untagged
@@ -78,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   accelerationTime: 0.4
-  nodeReachedDistance: 0.01
+  nodeReachedDistance: 0.05
 --- !u!50 &400632827811915503
 Rigidbody2D:
   serializedVersion: 5
@@ -128,6 +129,65 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &5675439543025832800
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193872144135016039}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5644083, y: 4.4050035}
+      - {x: 0.15746307, y: 4.9351854}
+      - {x: -0.26018715, y: 4.659494}
+      - {x: -0.095523834, y: 4.009536}
+      - {x: -0.30220985, y: 3.7451813}
+      - {x: -0.38496208, y: 2.9764798}
+      - {x: -0.3057356, y: 1.7044936}
+      - {x: -0.47867304, y: 0.5710571}
+      - {x: -0.4975872, y: -0.052604914}
+      - {x: 0.4094711, y: 0.10855758}
+      - {x: 0.3253523, y: 1.814682}
+      - {x: 0.21623802, y: 3.7987924}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6157792680335953242
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +253,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c1b697633a5e6f4b8362ed5669cac89, type: 2}
+  - {fileID: 2100000, guid: 2c7bd55102102244ab8ec35bc25e8856, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

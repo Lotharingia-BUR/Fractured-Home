@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   accelerationTime: 0.3
-  nodeReachedDistance: 0.01
+  nodeReachedDistance: 0.05
 --- !u!60 &8159972617036264881
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -239,8 +239,8 @@ Transform:
   m_GameObject: {fileID: 7948371981202496995}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
-  m_LocalScale: {x: 0.3, y: 1.5000001, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.26, y: 1.3, z: 0.26}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6706383220102595070}

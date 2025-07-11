@@ -61,8 +61,6 @@ public class PointAndClickObject : Interactable
 
     protected override void OnClicked()
     {
-        if (PauseModeManager.Instance.pauseMode != PauseMode.Unpaused) { return; }
-
         _dylan.SetDestination(this, dylanDestinationNode);
         _casper.SetDestination(this, casperDestinationNode);
     }

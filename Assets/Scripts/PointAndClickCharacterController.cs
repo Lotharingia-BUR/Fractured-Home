@@ -45,6 +45,11 @@ public class PointAndClickCharacterController : MonoBehaviour
         _acceleration = maxSpeed / accelerationTime;
     }
 
+    void OnDisable()
+    {
+        AnimUpdate();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -127,6 +132,7 @@ public class PointAndClickCharacterController : MonoBehaviour
         yield return new WaitUntil(() => _path != null);
 
         yield return new WaitUntil(() => _currentlyFollowingPath == null);
+        yield return new WaitForEndOfFrame();
 
         if (pncObject != null) { pncObject.SendMessage("ObjectReached", gameObject.name); }
 
@@ -158,6 +164,11 @@ public class PointAndClickCharacterController : MonoBehaviour
         if (_currentlyFollowingPath != null)
         {
             _interruptMovement = true;
+        }
+
+        if (_movementOverrideCoroutine != null)
+        {
+            StopCoroutine(_movementOverrideCoroutine);
         }
     }
 
@@ -197,14 +208,9 @@ public class PointAndClickCharacterController : MonoBehaviour
                     _currentSpeed = 0f;
                     _currentVelocity = Vector3.zero;
 
-                    if (_movementOverrideCoroutine != null)
-                    {
-                        StopCoroutine(_movementOverrideCoroutine);
-                        _movementOverrideCoroutine = null;
-                    }
-
-                    StopCoroutine(_currentlyFollowingPath);
+                    Coroutine temp = _currentlyFollowingPath;
                     _currentlyFollowingPath = null;
+                    StopCoroutine(temp);
                 }
             }
 
