@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,8 @@ public class EventTriggerBox : MonoBehaviour
     public bool triggerOnce = true;
 
     public GameplayEvent onTriggerEvent;
+
+    private Coroutine eventCoroutine = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,17 +37,42 @@ public class EventTriggerBox : MonoBehaviour
 
     }
 
+    void OnMouseDown()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D[] hitsArray = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+        foreach (RaycastHit2D hit in hitsArray)
+        {
+            Interactable o = hit.collider?.GetComponent<Interactable>();
+            if (o != null)
+            {
+                o.Click();
+            }
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PointAndClickCharacterController>() != null)
+        PointAndClickCharacterController chara = collision.GetComponent<PointAndClickCharacterController>();
+        if (chara != null)
         {
-            StartCoroutine(onTriggerEvent.Run());
+            chara.EndCurrentPath();
 
-            if (triggerOnce)
-            {
-                PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-                Destroy(gameObject);
-            }
+            if (eventCoroutine == null) { eventCoroutine = StartCoroutine(EventCoroutine()); }
+        }
+    }
+
+    private IEnumerator EventCoroutine()
+    {
+        StartCoroutine(onTriggerEvent.Run());
+
+        yield return new WaitUntil(() => !onTriggerEvent.isRunning);
+
+        if (triggerOnce)
+        {
+            PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
+            Destroy(gameObject);
         }
     }
 }

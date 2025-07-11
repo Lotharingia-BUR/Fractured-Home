@@ -1,13 +1,15 @@
 .header {
-    font-size: 90px;
+    font-size: 120px;
     -unity-text-outline-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
+    color: rgb(167, 255, 251);
     align-items: center;
+    text-shadow: 6.5px 7.1px 13.8px rgba(111, 238, 232, 0);
+    -unity-font-definition: url("project://database/Assets/UI%20Assets/Font/IMFellDWPicaSC-Regular.ttf?fileID=12800000&guid=f65ce1e5d06b65444b3d2bf5f9db417a&type=3#IMFellDWPicaSC-Regular");
 }
 
 .main-menu-btn {
-    font-size: 28px;
-    width: 400px;
+    font-size: 48px;
+    width: 300px;
     flex-grow: 0;
     background-color: rgba(130, 130, 130, 0);
     -unity-background-image-tint-color: rgba(255, 255, 255, 0);
@@ -18,10 +20,11 @@
     -unity-font-definition: url("project://database/Assets/UI%20Assets/Font/IMFellDWPicaSC-Regular.ttf?fileID=12800000&guid=f65ce1e5d06b65444b3d2bf5f9db417a&type=3#IMFellDWPicaSC-Regular");
     margin-right: 25px;
     margin-left: 25px;
+    color: rgb(167, 255, 251);
 }
 
 .main-menu-btn:hover {
-    font-size: 34px;
+    font-size: 56px;
     color: rgb(131, 255, 238);
     text-shadow: 0 0 6.2px rgba(131, 255, 238, 0);
     transition-duration: 0.3s;

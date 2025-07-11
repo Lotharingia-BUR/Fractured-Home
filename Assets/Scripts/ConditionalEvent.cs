@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -15,6 +16,8 @@ public class ConditionalEvent : MonoBehaviour
 
     [HideInInspector] public string[] conditionKeys = { };
     [HideInInspector] public PointAndClickObjectState[] conditionValues = { };
+
+    private float k_checkInterval = 0.1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,13 +37,21 @@ public class ConditionalEvent : MonoBehaviour
         TriggerObjectState state = PersistentObjectStateManager.Instance.GetTriggerState(triggerID);
         if (state.wasTriggered)
         {
-            StartCoroutine(onReloadedEvent.Run());
-            Destroy(this);
+            StartCoroutine(EventCoroutine(new GameplayEvent[] { onReloadedEvent }));
+        }
+        else
+        {
+            StartCoroutine(CheckConditions());
         }
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    private IEnumerator CheckConditions()
     {
         bool conditionsMet = true;
         foreach (var condition in conditions)
@@ -53,13 +64,39 @@ public class ConditionalEvent : MonoBehaviour
             }
         }
 
-        if (conditionsMet)
+        while (!conditionsMet)
         {
-            StartCoroutine(onConditionMetEvent.Run());
-            StartCoroutine(onReloadedEvent.Run());
-            PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
-            Destroy(this);
+            yield return new WaitForSeconds(k_checkInterval);
+
+            conditionsMet = true;
+            foreach (var condition in conditions)
+            {
+                PointAndClickObjectState objState = PersistentObjectStateManager.Instance.GetObjectState(condition.Key);
+                if (condition.Value != objState)
+                {
+                    conditionsMet = false;
+                    break;
+                }
+            }
         }
+
+        StartCoroutine(EventCoroutine(new GameplayEvent[] { onConditionMetEvent, onReloadedEvent }));
+    }
+
+    private IEnumerator EventCoroutine(GameplayEvent[] gEvents)
+    {
+        foreach (GameplayEvent e in gEvents)
+        {
+            StartCoroutine(e.Run());
+        }
+
+        foreach (GameplayEvent e in gEvents)
+        {
+            yield return new WaitUntil(() => !e.isRunning);
+        }
+
+        PersistentObjectStateManager.Instance.SaveTriggerState(triggerID, true);
+        Destroy(this);
     }
 }
 
