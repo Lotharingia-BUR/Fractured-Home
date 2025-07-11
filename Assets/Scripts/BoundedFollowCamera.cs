@@ -1,13 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEditor.IMGUI.Controls;
-using UnityEditorInternal;
-
-
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class BoundedFollowCamera : MonoBehaviour
 {

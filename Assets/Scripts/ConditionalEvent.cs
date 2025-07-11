@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+
+#if UNITY_EDITOR
+using System.Linq;
+using UnityEditor;
+#endif
 
 public class ConditionalEvent : MonoBehaviour
 {
@@ -101,6 +104,7 @@ public class ConditionalEvent : MonoBehaviour
 }
 
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(ConditionalEvent)), CanEditMultipleObjects]
 public class ConditionalEventEditor : Editor
 {
@@ -162,3 +166,4 @@ public class ConditionalEventEditor : Editor
         }
     }
 }
+#endif

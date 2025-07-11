@@ -3,7 +3,6 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
-#endif
 
 [FilePath("Assets/Narrative/GlobalVariables.json", FilePathAttribute.Location.ProjectFolder)]
 public class DialogueVariables : ScriptableSingleton<DialogueVariables>
@@ -18,6 +17,7 @@ public class DialogueVariables : ScriptableSingleton<DialogueVariables>
         Debug.Log("Saved to " + GetFilePath());
     }
 }
+#endif
 
 //Class from this answer on the Unity Forums: https://discussions.unity.com/t/solved-how-to-serialize-dictionary-with-unity-serialization-system/71474/4
 [System.Serializable]
