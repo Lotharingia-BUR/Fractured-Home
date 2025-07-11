@@ -524,7 +524,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1656552210}
-  - {fileID: 168063955}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &78748162
@@ -876,68 +875,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1858296253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &168063954
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 74897402}
-    m_Modifications:
-    - target: {fileID: 3050292409138628302, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_Name
-      value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b544cad1a0a73094e9919544804f545e, type: 3}
---- !u!4 &168063955 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5370609885333927878, guid: b544cad1a0a73094e9919544804f545e, type: 3}
-  m_PrefabInstance: {fileID: 168063954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183716191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,6 +3794,115 @@ Transform:
   - {fileID: 322356316}
   m_Father: {fileID: 94523440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &790620347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790620348}
+  - component: {fileID: 790620350}
+  - component: {fileID: 790620349}
+  m_Layer: 0
+  m_Name: Talk to Dad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &790620348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790620347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.45, y: -1.44, z: 2.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1243865849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &790620349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790620347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75715de7ef62eee438b843488b4287eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerID: Enter Dylans Room
+  triggerOnce: 1
+  onTriggerEvent:
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 71957f83d68748b4b85743b88a31bc55, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!61 &790620350
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790620347}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.49310064, y: 1.1490119}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.9862013, y: 5.717092}
+  m_EdgeRadius: 0
 --- !u!1 &793534647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,6 +4209,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 790620347}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   conditionKeys:
   - Parents_Kitchen
   conditionValues:
@@ -4198,6 +4256,20 @@ MonoBehaviour:
   triggerID: Give_inKey
   onConditionMetEvent:
     events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 7ecd01c068039ff40946a14feab955d1, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2010199941}
@@ -6052,6 +6124,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 404686196}
+  - {fileID: 790620348}
   m_Father: {fileID: 94523440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1250076589 stripped
@@ -7019,7 +7092,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: 1e17ac9e05452444bb022312c9e87d91, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: d490eb8acade03d4798d31342446dd29, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -7031,20 +7104,6 @@ MonoBehaviour:
   itemKey: {fileID: 11400000, guid: 401e43eeca62aea40b162122c17e8b8d, type: 2}
   onUnlockedEvent:
     events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2010199941}
-          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
-          m_MethodName: SetDialogue
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: ca705f898fa73b74c91cfdfbbee1cc4f, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2010199941}
@@ -8494,6 +8553,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2010199941}
           m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 96c32139e5c607a4da0f8eaf1a53ad50, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010199941}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
           m_MethodName: AddItemToInventory
           m_Mode: 2
           m_Arguments:
@@ -8511,6 +8584,20 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 1674591397}
             m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1411863531}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: Unlock
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

@@ -1,18 +1,3 @@
-//player puts the batteries in and tries the toy out 
-//wee it's real cute, let's have a final word with dad before he sends us off to mom.
-
-As the windup toy clatters its way around the room, Dylan's face lights up with joy. His father looks on, a warm glow seeping from his ghostly form.
-
-Casper: 'He looks happy. They both do.'
-
-Dylan: "I love it! I'm definitely bringing this back home with me."
-
-Dylan's father: "I'm so glad you do! I was worried I wasn't up to date on what you like. I tried my best to think of you."
-
-Dylan: "Don't worry dad, I'm happy with anything you give me. What do you think Casper?"
-
-Casper: "MEOW!!"
-
 Dylan's father: "You should go find your mom. She has a bit of a habit of pretending that nothing happened instead of owning up to things."
 
 Dylan's father: "...So do I, I realize that now. But the main thing is that you should speak with her too."

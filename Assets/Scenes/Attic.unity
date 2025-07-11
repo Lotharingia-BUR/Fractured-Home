@@ -381,6 +381,20 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1671181074}
           m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: febda271b65007b438ed4ce8432addda, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
           m_MethodName: AddItemToInventory
           m_Mode: 2
           m_Arguments:
@@ -9566,7 +9580,35 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   onReloadedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: SetDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 99e6d21ca80ea9c43a439b99ce588da4, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1671181074}
+          m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
+          m_MethodName: AddItemToInventory
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 7a3f8483874c60541a0c7be7b82df68c, type: 2}
+            m_ObjectArgumentAssemblyTypeName: InventoryItem, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   conditionKeys:
   - Dad_DylansRoom
   - Mom_Attic
