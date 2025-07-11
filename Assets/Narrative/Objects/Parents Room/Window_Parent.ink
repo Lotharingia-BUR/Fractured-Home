@@ -1,6 +1,6 @@
-//this is for if the player didn't pick up the key
+You look out of the window to see your foster parents sitting in the car. 
 
-Dylan: "Hmm, the door's locked. I wonder if the spare key's still under the rug?"
+They give you a small wave, You wave back
 
 
     -> END

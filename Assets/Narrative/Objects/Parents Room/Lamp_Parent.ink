@@ -1,4 +1,3 @@
-//* the player just found the key and opened the door
+You go to flip the switch, but the power is off
 
-Dylan: "Phew! It worked! C’mon Casper, let’s press on.”
     -> END
