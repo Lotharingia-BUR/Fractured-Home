@@ -16,7 +16,7 @@ public class InventoryDrawer : MonoBehaviour
         // Get current shown position
         shownPosition = drawerPanel.anchoredPosition;
         // Set hidden position (off screen to the left)
-        hiddenPosition = shownPosition + new Vector2(-drawerPanel.rect.width, 0);
+        hiddenPosition = shownPosition + new Vector2(-drawerPanel.rect.width * 0.82f, 0);
 
         // Start hidden
         drawerPanel.anchoredPosition = hiddenPosition;

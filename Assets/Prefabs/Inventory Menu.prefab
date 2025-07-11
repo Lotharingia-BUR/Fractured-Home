@@ -627,17 +627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b13d0f9ddab4c4cb00d726ba9854c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawerPanel: {fileID: 8774341712327771616}
+  drawerPanel: {fileID: 7376612251883594039}
   toggleButton: {fileID: 6227252941472840970}
   slideSpeed: 5
 --- !u!224 &7376612251883594039 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1170346320703806808, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
-  m_PrefabInstance: {fileID: 8530690730948869231}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &8774341712327771616 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1128049766544718223, guid: 969cee1164cc75a478cfc201eb9bc012, type: 3}
   m_PrefabInstance: {fileID: 8530690730948869231}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8582913045953642398
