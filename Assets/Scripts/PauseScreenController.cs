@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PauseScreenController : MonoBehaviour
@@ -74,7 +75,8 @@ public class PauseScreenController : MonoBehaviour
 
     private void OnQuitButtonClicked()
     {
-        Application.Quit();
-        Debug.Log("Quit button clicked – will quit in build.");
+        Time.timeScale = 1f; // Just in case the game was paused
+        SceneManager.LoadScene("Main Menu");
+        Debug.Log("Loading Main Menu...");
     }
 }
