@@ -34,6 +34,10 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     private int _speedHash;
 
+    private float _timeoutTimer = 0f;
+
+    private const float k_timeout = 0.2f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -67,13 +71,20 @@ public class PointAndClickCharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !MouseController.Instance.isOverObject && PauseModeManager.Instance.pauseMode == PauseMode.Unpaused)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !MouseController.Instance.isOverObject && PauseModeManager.Instance.pauseMode == PauseMode.Unpaused && _timeoutTimer <= 0f)
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             SetDestination(mouseWorldPos);
+
+            _timeoutTimer = k_timeout;
         }
 
         AnimUpdate();
+
+        if (_timeoutTimer > 0)
+        {
+            _timeoutTimer -= Time.deltaTime;
+        }
     }
 
     private void AnimUpdate()
