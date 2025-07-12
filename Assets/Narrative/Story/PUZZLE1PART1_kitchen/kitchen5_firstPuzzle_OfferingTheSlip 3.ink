@@ -4,7 +4,7 @@ Dylan: "They really are just like mom and dad, splitting up into separate rooms 
 
 Dylan: "I'm not gonna stop trying though! Let's chase after them!!"
 
-Dylan: "Mom usually needs a minute to cool down first, so let's go find dad. I saw him heading to the basement."
+Dylan: "Mom usually needs a minute to cool down, ussally hiding away in the attic. I think I saw dad heading to my room."
 
 //end scene, the story is now proceeding to the first half of the second puzzle
 

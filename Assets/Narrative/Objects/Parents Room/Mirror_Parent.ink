@@ -1,6 +1,6 @@
-You look into the mirror
+He looks into the mirror
 
-Despite everything it is still you
+Despite everything it is still him
 
 
     -> END

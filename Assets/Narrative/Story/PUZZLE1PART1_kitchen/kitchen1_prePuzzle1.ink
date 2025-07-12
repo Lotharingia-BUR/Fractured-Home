@@ -31,7 +31,7 @@ Dylan: "The field trip? Oh! I remember that..."
 
 Dylan: "Mom and dad were so stressed I just- I didn't want to burden them."
 
-Dylan: "I think I remember where I kept the permission slip. Come on Casper! To the basement!"
+Dylan: "I think I remember where I kept the permission slip. Come on Casper! To my room!"
 
 Capser: "Meow!"
 

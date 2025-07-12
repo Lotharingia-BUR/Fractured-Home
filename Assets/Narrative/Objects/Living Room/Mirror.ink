@@ -1,4 +1,4 @@
-You look into the mirror
+He looks into the mirror
 
-It's you!
+It's him!
     -> END

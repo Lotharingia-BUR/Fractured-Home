@@ -1,6 +1,6 @@
-You look out of the window to see your foster parents sitting in the car. 
+He look out of the window to see his foster parents sitting in the car. 
 
-They give you a small wave, You wave back
+They give him a small wave, and he waves back
 
 
     -> END

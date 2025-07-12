@@ -1,4 +1,4 @@
-A cozy table, you remember buidling it with your dad
+A cozy table, you remember dylan buidling it with his dad
 
 
     -> END

@@ -3,7 +3,7 @@
 
 Dylan: "Hmm, they don't seem to be hearing me right now."
 
-Dylan: "Maybe if I find the permission slip from the basement, I can get them to notice me."
+Dylan: "Maybe if I find the permission slip from my room, I can get them to notice me."
 
 
 
