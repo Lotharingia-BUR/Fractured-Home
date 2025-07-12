@@ -11,8 +11,6 @@ public class MainMenuController : MonoBehaviour
     private AudioSource _audioSource;
 
 
-    //   private Button _saveBtn;
-    //   private Button _settingsBtn;
     //   private Button _creditsBtn;
     //   private Button _quitBtn;
 
