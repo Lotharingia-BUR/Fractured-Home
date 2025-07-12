@@ -217,8 +217,6 @@ public class PointAndClickCharacterController : MonoBehaviour
                 if (_interruptMovement)
                 {
                     _interruptMovement = false;
-                    _currentSpeed = 0f;
-                    _currentVelocity = Vector3.zero;
 
                     Coroutine temp = _currentlyFollowingPath;
                     _currentlyFollowingPath = null;
