@@ -49,6 +49,8 @@ public class PointAndClickCharacterController : MonoBehaviour
     {
         _currentSpeed = 0f;
         _currentVelocity = Vector3.zero;
+        _interruptMovement = false;
+
         if (_movementOverrideCoroutine != null)
         {
             StopCoroutine(_movementOverrideCoroutine);
@@ -230,7 +232,14 @@ public class PointAndClickCharacterController : MonoBehaviour
             do
             {
                 float decelerationDistance = -Mathf.Pow(_currentSpeed, 2f) / (2 * -_acceleration);
-                _currentSpeed = currentLine.magnitude - distanceOnLine > decelerationDistance ? Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed) : _currentSpeed - _acceleration * Time.deltaTime;
+                if (currentLine.magnitude - distanceOnLine > decelerationDistance || _interruptMovement)
+                {
+                    _currentSpeed = Mathf.Clamp(_currentSpeed + _acceleration * Time.deltaTime, 0f, maxSpeed);
+                }
+                else
+                {
+                    _currentSpeed = Mathf.Clamp(_currentSpeed - _acceleration * Time.deltaTime, 0f, maxSpeed);
+                }
 
                 distanceOnLine += _currentSpeed * Time.deltaTime;
 
@@ -245,6 +254,7 @@ public class PointAndClickCharacterController : MonoBehaviour
         _currentSpeed = 0f;
         _currentVelocity = Vector3.zero;
 
+        _interruptMovement = false;
         _currentlyFollowingPath = null;
     }
 }
