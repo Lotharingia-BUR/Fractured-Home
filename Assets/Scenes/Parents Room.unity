@@ -6143,20 +6143,6 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2136354182}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 5
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 1671181074}
           m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
           m_MethodName: LoadScene
@@ -7076,7 +7062,6 @@ Transform:
   m_Children:
   - {fileID: 1671181073}
   - {fileID: 781344746}
-  - {fileID: 1568266150}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1366690885
@@ -7663,11 +7648,11 @@ Transform:
   m_GameObject: {fileID: 1568266147}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9220326, y: 16.402283, z: 41.04257}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1353802439}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572774428
 GameObject:
@@ -11103,11 +11088,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1533995159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2136354182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1829627568376423627, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
-  m_PrefabInstance: {fileID: 369873975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2137322356
 GameObject:
   m_ObjectHideFlags: 0
@@ -11269,3 +11249,4 @@ SceneRoots:
   - {fileID: 600581139}
   - {fileID: 369873975}
   - {fileID: 270873431}
+  - {fileID: 1568266150}
