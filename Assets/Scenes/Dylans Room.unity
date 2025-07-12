@@ -7075,11 +7075,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4657647167237507114, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
   m_PrefabInstance: {fileID: 1367983754}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1367983756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6945333562629800823, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
-  m_PrefabInstance: {fileID: 1367983754}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374096444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8908,17 +8903,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379247119}
     m_Modifications:
-    - target: {fileID: 1314068386749243653, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
-      propertyPath: pauseButton
-      value: 
-      objectReference: {fileID: 1367983756}
     - target: {fileID: 4070742406058530589, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
       propertyPath: m_Name
       value: PauseScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4070742406058530589, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4727275586972520249, guid: 9afbb4cc3c81c4a41a8684c4fd2ecefd, type: 3}
       propertyPath: m_LocalPosition.x
