@@ -1,34 +1,48 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
-
 
 public class PauseScreenController : MonoBehaviour
 {
     private UIDocument pauseDocument;
-
     private VisualElement pauseVT;
 
-    private UnityEngine.UIElements.Button resumeBtn;
-
-
+    private Button resumeBtn;
+    private Button quitBtn;
 
     private bool isPaused = false;
 
     private void Awake()
     {
         pauseDocument = GetComponent<UIDocument>();
+        if (pauseDocument == null)
+        {
+            Debug.LogError("UIDocument is missing from this GameObject!");
+            return;
+        }
+
         pauseVT = pauseDocument.rootVisualElement;
+        if (pauseVT == null)
+        {
+            Debug.LogError("RootVisualElement is null!");
+            return;
+        }
 
-        // Reference the button by the name in UXML
-        resumeBtn = pauseVT.Q<UnityEngine.UIElements.Button>("ResumeBtn");
+        // Safely try to find buttons
+        resumeBtn = pauseVT.Q<Button>("ResumeBtn");
+        quitBtn = pauseVT.Q<Button>("QuitBtn");
 
+        if (resumeBtn != null)
+            resumeBtn.clicked += ResumeGame;
+        else
+            Debug.LogWarning("ResumeBtn not found in UI!");
 
-        // Hide pause menu initially
+        if (quitBtn != null)
+            quitBtn.clicked += OnQuitButtonClicked;
+        else
+            Debug.LogWarning("QuitBtn not found in UI!");
+
+        // Hide pause UI at start
         pauseVT.style.display = DisplayStyle.None;
-
-        // Hook up button functionality
-        resumeBtn.clicked += ResumeGame;
     }
 
     private void Update()
@@ -42,17 +56,25 @@ public class PauseScreenController : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    private void PauseGame()
     {
         isPaused = true;
         Time.timeScale = 0f;
         pauseVT.style.display = DisplayStyle.Flex;
+        Debug.Log("Game Paused");
     }
 
-    void ResumeGame()
+    private void ResumeGame()
     {
         isPaused = false;
         Time.timeScale = 1f;
         pauseVT.style.display = DisplayStyle.None;
+        Debug.Log("Game Resumed");
+    }
+
+    private void OnQuitButtonClicked()
+    {
+        Application.Quit();
+        Debug.Log("Quit button clicked – will quit in build.");
     }
 }
