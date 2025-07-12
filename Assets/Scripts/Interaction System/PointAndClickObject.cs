@@ -22,10 +22,13 @@ public class PointAndClickObject : Interactable
         {
             Destroy(gameObject);
         }
-        _isUnlocked = savedState.isUnlocked;
-        if (_isUnlocked)
+        else
         {
-            StartCoroutine(onUnlockedEvent.Run());
+            _isUnlocked = savedState.isUnlocked;
+            if (_isUnlocked)
+            {
+                StartCoroutine(onUnlockedEvent.Run());
+            }
         }
     }
 
