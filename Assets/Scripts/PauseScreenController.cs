@@ -28,7 +28,7 @@ public class PauseScreenController : MonoBehaviour
         pauseVT.style.display = DisplayStyle.None;
 
         // Hook up button functionality
-        //resumeBtn.clicked += ResumeGame;
+        resumeBtn.clicked += ResumeGame;
     }
 
     private void Update()
