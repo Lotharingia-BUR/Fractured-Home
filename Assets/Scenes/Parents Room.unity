@@ -1420,7 +1420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 229542566}
   m_Layer: 0
-  m_Name: Node 18
+  m_Name: Bed B
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1779,8 +1779,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  dylanDestinationNode: {fileID: 1265380642}
-  casperDestinationNode: {fileID: 875609017}
+  dylanDestinationNode: {fileID: 1086276145}
+  casperDestinationNode: {fileID: 229542566}
   itemKey: {fileID: 0}
   onUnlockedEvent:
     events: []
@@ -4571,7 +4571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875609017}
   m_Layer: 0
-  m_Name: Bed B
+  m_Name: Node 12
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5559,7 +5559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086276145}
   m_Layer: 0
-  m_Name: Node 18
+  m_Name: Bed A
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6543,7 +6543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265380642}
   m_Layer: 0
-  m_Name: Bed A
+  m_Name: Node 12
   m_TagString: Point Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
