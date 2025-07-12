@@ -1967,7 +1967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305e6ee18b3d7974a93bcf3273af725c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseButton: {fileID: 1488062267}
 --- !u!114 &545348426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,9 +7940,25 @@ PrefabInstance:
       value: pauseButton
       objectReference: {fileID: 0}
     - target: {fileID: 3389413385997687735, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389413385997687735, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1228282201877544718}
+    - target: {fileID: 3389413385997687735, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389413385997687735, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseScreenController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389413385997687735, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4550154935067628137, guid: db8eb9c4acbba194e995dde1b8ed09b9, type: 3}
       propertyPath: m_Name
       value: HUD
