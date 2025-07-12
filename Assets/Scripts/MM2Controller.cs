@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MM2Controller : MonoBehaviour
 {
     [SerializeField] private Button startButton;
     [SerializeField] private Button quitButton;
-    [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private Button creditsButton; // Optional: reference for clarity
 
     private void Awake()
     {
@@ -14,11 +15,14 @@ public class MM2Controller : MonoBehaviour
 
         if (quitButton != null)
             quitButton.onClick.AddListener(OnQuitButtonClicked);
+
+        if (creditsButton != null)
+            creditsButton.onClick.AddListener(OnCreditsButtonClicked);
     }
 
     private void OnStartButtonClicked()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Lawn");
+        SceneManager.LoadScene("Lawn");
     }
 
     private void OnQuitButtonClicked()
@@ -29,12 +33,8 @@ public class MM2Controller : MonoBehaviour
 
     public void OnCreditsButtonClicked()
     {
-        creditsPanel.SetActive(true);
-    }
-
-    public void OnBackFromCreditsClicked()
-    {
-        creditsPanel.SetActive(false);
+        SceneManager.LoadScene("Credits"); // Change to your actual credits scene name
     }
 }
+
 
