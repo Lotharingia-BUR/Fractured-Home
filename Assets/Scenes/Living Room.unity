@@ -5847,7 +5847,7 @@ Transform:
   m_GameObject: {fileID: 411019644}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -27.16, y: 0.40000004, z: -8.4}
+  m_LocalPosition: {x: -27.16, y: 0.32, z: -8.4}
   m_LocalScale: {x: 0.3, y: 1.5000005, z: 0.22500001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13002,7 +13002,7 @@ MonoBehaviour:
           m_MethodName: PlayOneShot
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 1b9defdcf0157f244a69423c5ee98ea4, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: d32d2cc781bc55a49b34524d5d80835a, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -15950,7 +15950,7 @@ Transform:
   m_GameObject: {fileID: 1372340340}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -27.16, y: 0.40000004, z: -8.092653}
+  m_LocalPosition: {x: -27.16, y: 0.32, z: -8.092653}
   m_LocalScale: {x: 0.3, y: 1.5000006, z: 0.22500001}
   m_ConstrainProportionsScale: 0
   m_Children:
