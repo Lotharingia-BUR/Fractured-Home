@@ -15,9 +15,7 @@ Dylan's father: "Yeah, you do."
 
 Dylan's mother: "..."
 
-Dylan's father: "..."
-
-Dylan: "Uh oh! Looks like they're fighting again! Let's head over quick!"
+Dylan's father: "...""
 
 //head over to the parents to hear the final convo
 
