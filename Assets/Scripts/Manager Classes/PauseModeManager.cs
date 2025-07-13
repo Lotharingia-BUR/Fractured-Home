@@ -50,7 +50,12 @@ public class PauseModeManager : Manager<PauseModeManager>
                     v.enabled = false;
                 }
 
-                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
+                foreach (var v in FindObjectsByType<EventTriggerBox>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<ConditionalEvent>(FindObjectsSortMode.None))
                 {
                     v.enabled = false;
                 }
@@ -69,7 +74,12 @@ public class PauseModeManager : Manager<PauseModeManager>
                     v.enabled = false;
                 }
 
-                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
+                foreach (var v in FindObjectsByType<EventTriggerBox>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<ConditionalEvent>(FindObjectsSortMode.None))
                 {
                     v.enabled = false;
                 }
@@ -89,9 +99,14 @@ public class PauseModeManager : Manager<PauseModeManager>
                     v.enabled = true;
                 }
 
-                foreach (var v in FindObjectsByType<PointAndClickObject>(FindObjectsSortMode.None))
+                foreach (var v in FindObjectsByType<EventTriggerBox>(FindObjectsSortMode.None))
                 {
-                    v.enabled = true;
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<ConditionalEvent>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
                 }
                 break;
         }
