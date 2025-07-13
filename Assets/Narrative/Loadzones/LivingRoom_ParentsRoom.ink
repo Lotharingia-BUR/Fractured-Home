@@ -1,3 +1,3 @@
-A ghostly lock rests around the handle, it is cold to the touch. You get the sense that something important is behind this door...
+A ghostly lock rests around the handle, it is cold to the touch.
 
     -> END
