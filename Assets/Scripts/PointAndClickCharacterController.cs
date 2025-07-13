@@ -268,4 +268,14 @@ public class PointAndClickCharacterController : MonoBehaviour
         _interruptMovement = false;
         _currentlyFollowingPath = null;
     }
+
+    public void StartPickupAnim()
+    {
+        PauseModeManager.Instance.SetPauseMode(PauseMode.MiscPaused);
+    }
+
+    public void EndPickupAnim()
+    {
+        PauseModeManager.Instance.SetPauseMode(PauseMode.Unpaused);
+    }
 }

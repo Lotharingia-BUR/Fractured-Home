@@ -8,7 +8,8 @@ public enum PauseMode
 {
     Unpaused,
     Dialogue,
-    FadeOut
+    FadeOut,
+    MiscPaused
 }
 
 //Pause Mode Manager
@@ -62,6 +63,30 @@ public class PauseModeManager : Manager<PauseModeManager>
                 break;
 
             case PauseMode.FadeOut:
+                dialogueBox.SetActive(false);
+
+                foreach (var v in FindObjectsByType<PointAndClickCharacterController>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<Interactable>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<EventTriggerBox>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+
+                foreach (var v in FindObjectsByType<ConditionalEvent>(FindObjectsSortMode.None))
+                {
+                    v.enabled = false;
+                }
+                break;
+
+            case PauseMode.MiscPaused:
                 dialogueBox.SetActive(false);
 
                 foreach (var v in FindObjectsByType<PointAndClickCharacterController>(FindObjectsSortMode.None))
