@@ -22,9 +22,9 @@ Dylan: "Why did you guys fight so much over the permission slip? In retrospect, 
 
 Dylan's father: "No, it was. We didn't know you had a field trip until that day your mom picked you up early from school."
 
-Dylan's father: "And in terms of when things started falling out between your mom and I, it was never because of this one incident with the permission slip... 
+Dylan's father: "And in terms of when things started falling out between your mom and I, it was never because of this one incident with the permission slip..."
 
-...It was a lot of small and big things that built up over time."
+Dylan's father: "...It was a lot of small and big things that built up over time."
 
 Dylan's father: "There was a point I got too busy worrying over the menial things of what kept our family together."
 

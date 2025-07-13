@@ -62,7 +62,9 @@ Dylan: "Otherwise that'd be no different from talking to the wall that dad's fry
 
 Dylan's father: "Hey!"
 
-Seeing the smiling faces of his wife and child, Dylan's father huffs a laugh and scratches a point on his forehead. He can feel they don't have a lot of time left with Dylan, so he lowers himself this time, to speak with his son.
+Seeing the smiling faces of his wife and child, Dylan's father huffs a laugh and scratches a point on his forehead. 
+
+He can feel they don't have a lot of time left with Dylan, so he lowers himself this time, to speak with his son.
 
 Dylan's father: "Let's get that permission slip signed, shall we?"
 
