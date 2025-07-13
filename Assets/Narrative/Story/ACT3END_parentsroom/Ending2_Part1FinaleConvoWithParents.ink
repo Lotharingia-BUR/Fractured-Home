@@ -30,7 +30,9 @@ Dylan's mother: "I rue how things turned out the way they did between us. It was
 
 Dylan's father: "I still think that if we had been more reasonable, we could've made this work. I mean, we built a whole life together didn't we?"
 
-Dylan's mother: "Even if we did survive, I believe that divorce was still the best option. I don't think you're evil, but we just have too many differences. I loved you, and I learned to be better from this, but I won't change who I am for you."
+Dylan's mother: "Even if we did survive, I believe that divorce was still the best option. I don't think you're evil, but we just have too many differences." 
+
+Dylan's mother: "I loved you, and I learned to be better from this, but I won't change who I am for you."
 
 Dylan's father: "That's fine, this divorce taught me that I wouldn't change either, but I understand now where you come from. I respect that."
 

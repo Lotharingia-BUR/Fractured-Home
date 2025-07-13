@@ -7,7 +7,9 @@ Dylan: "Pinky promise."
 
 Dylan's father: "Good communication isn't like going to court. Your end goal isn't to declare who's right and sentence who's wrong, because there are times when agreement isn't even the solution!"
 
-Dylan's father: "Sometimes you go through all this talking and analyzing, and you realize you're still at odds with each other. It happens. What's important is you sit with that person and you listen to them, you understand where their point comes from, and you work together to find compromise."
+Dylan's father: "Sometimes you go through all this talking and analyzing, and you realize you're still at odds with each other. It happens."
+
+Dylan's father: "What's important is you sit with that person and you listen to them, you understand where their point comes from, and you work together to find compromise."
 
 Dylan's mother: "And when you love someone, sometimes you end up having to choose whether winning every argument means more to you than their feelings. That's what compromise can look like."
 
