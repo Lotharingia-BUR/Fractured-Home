@@ -1,3 +1,3 @@
-A poster of a Stegosaurus, your second favourite dinosaur
+A poster of a Stegosaurus, his second-favourite dinosaur.
 
     -> END

@@ -1,6 +1,6 @@
 //player free roams the living room for a bit, but a crash from the kitchen prompts the player to go check it out
 
-[You hear a crash from up ahead]
+\*CRASH*
 
 Dylan: "What was that?!"
 

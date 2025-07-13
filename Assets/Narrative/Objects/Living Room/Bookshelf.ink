@@ -1,3 +1,3 @@
-Dylan: "Just a bunch of dad's old stuffy books"
+Dylan: "Just a bunch of dad's stuffy old books."
 
     -> END

@@ -1,3 +1,3 @@
-Would be comfy spot to lay down, if it wasnt rotting with age
+Would be a comfy spot to lay down, if it wasn't rotting with age.
 
     -> END

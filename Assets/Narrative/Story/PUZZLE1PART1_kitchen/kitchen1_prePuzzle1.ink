@@ -1,15 +1,15 @@
 
 //context: the player has just entered the kitchen to see ghost mom and ghost dad fighting. 
 
-Dylan's mother: "You're never listen to me!"
+Dylan's mother: "You never take me seriously!"
 
 Dylan's father: "You're only ever pointing fingers!" 
 
-Dylan: "...They're- ghosts?"
+Dylan: "They're...ghosts?"
 
-Dylan's mother: "Because you never admit when you're wrong, unless I throw it in your face."
+Dylan's mother: "Because you never admit when you're wrong unless I throw it in your face."
 
-Dylan's father: "And yet you're the one who never takes accountability for your actions."
+Dylan's father: "And yet you're the one who never takes accountability for your actions even when the truth is in your face!"
 
 Dylan's father: "Did you see the look on Dylan's face when he came home?"
 
@@ -17,9 +17,9 @@ Dylan: "..."
 
 Dylan's father: "He had a field trip to the museum and couldn't go,"
 
-Dylan's father: "All because you were raving about your work that week he needed the permission slip signed! And did you ever apologize?"
+Dylan's father: "All because you were raving about your work that week he needed the permission slip signed! And did you ever apologize? Did you even think about apologizing?"
 
-Dylan's mother: "Don't push this all on me. You're the one who's always too busy to pay attention to your own son!"
+Dylan's mother: "Don't push this all on me, of course I did! You're the one who's always too busy to pay attention to your own son!"
 
 Dylan's father: "I *was* busy!"
 
@@ -29,11 +29,11 @@ Casper: 'Yikes. Even in the afterlife, they're still fighting.'
 
 Dylan: "The field trip? Oh! I remember that..."
 
-Dylan: "Mom and dad were so stressed I just- I didn't want to burden them."
+Dylan: "Mom and dad were so stressed I just- I didn't want to bother them."
 
 Dylan: "I think I remember where I kept the permission slip. Come on Casper! To my room!"
 
-Capser: "Meow!"
+Casper: "Meow!"
 
 
 //end scene, player heads to the basement to retrieve permission slip

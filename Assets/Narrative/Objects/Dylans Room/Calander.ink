@@ -1,3 +1,3 @@
-It was February when you left, Almost 3 years ago now
+It was February when he left, three years ago. 
 
     -> END

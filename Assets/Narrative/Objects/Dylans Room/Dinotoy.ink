@@ -1,5 +1,5 @@
 \*Bzzzzt! Bzzzttt! Bzzzt Pzzzt!!*
 
-Dylan: "It is low on battery"
+Dylan: "Agh! It's low on battery. Wait...I don't remember this?"
 
     -> END

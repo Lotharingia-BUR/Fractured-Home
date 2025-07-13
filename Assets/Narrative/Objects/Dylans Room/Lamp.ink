@@ -1,3 +1,3 @@
-You flick the switch but nothing happens
+Dylan flicks the switch, but nothing happens.
 
     -> END

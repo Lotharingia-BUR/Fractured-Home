@@ -1,3 +1,3 @@
-The Clock Reads 1:45pm
+The clock reads 1:45pm.
 
     -> END
