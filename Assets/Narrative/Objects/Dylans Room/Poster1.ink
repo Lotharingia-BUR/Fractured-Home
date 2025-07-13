@@ -1,3 +1,3 @@
-Vroom Vroom Poster
+A large poster of a red car
 
     -> END
