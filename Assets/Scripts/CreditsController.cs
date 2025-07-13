@@ -15,6 +15,18 @@ public class CreditsController : MonoBehaviour
 
     void Start()
     {
+        if (DialogueManager.Instance != null)
+        {
+            Destroy(DialogueManager.Instance.transform.root.gameObject);
+        }
+        if (SceneManagerComponent.Instance != null)
+        {
+            Destroy(SceneManagerComponent.Instance.transform.root.gameObject);
+        }
+    }
+
+    private void ClearManagers()
+    {
 
     }
 
