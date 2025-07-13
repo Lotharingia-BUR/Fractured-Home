@@ -26230,6 +26230,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842400040}
     - target: {fileID: 7714770140186178781, guid: 0fc98245ed2eff34f8c01b50a938e4ba, type: 3}
+      propertyPath: smoothing
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714770140186178781, guid: 0fc98245ed2eff34f8c01b50a938e4ba, type: 3}
       propertyPath: background
       value: 
       objectReference: {fileID: 1622256111}
