@@ -1,5 +1,6 @@
 // Key drop
 
-As your dad heads off, he drops a ghostly key. The key to their bedroom.
+In the fraction of a second before the ghost disappears, he drops a key. The key to their bedroom.
+
 
     -> END

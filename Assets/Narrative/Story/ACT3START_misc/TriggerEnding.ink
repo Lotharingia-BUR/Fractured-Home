@@ -1,7 +1,6 @@
 //after mom fades away
 //lil bit of dialogue to close off the second puzzle and send the player to the last
 
-
 Dylan: "I wonder where they are now."
 
 Casper: 'Well, my cat senses tell me they're still here. They both seem to be in the same place now, in their bedroom.'
