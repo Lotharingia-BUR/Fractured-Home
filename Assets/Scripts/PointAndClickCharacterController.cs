@@ -135,7 +135,10 @@ public class PointAndClickCharacterController : MonoBehaviour
 
     public void SetDestination(PointAndClickObject sender, Transform destinationNode)
     {
-        if (_movementOverrideCoroutine != null || _currentlyFollowingPath != null) { return; }
+        if (_movementOverrideCoroutine != null)
+        {
+            StopCoroutine(_movementOverrideCoroutine);
+        }
 
         if (destinationNode != null)
         {
