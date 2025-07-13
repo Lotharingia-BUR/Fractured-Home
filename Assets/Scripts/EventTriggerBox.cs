@@ -65,6 +65,8 @@ public class EventTriggerBox : MonoBehaviour
 
     private IEnumerator EventCoroutine()
     {
+        yield return new WaitUntil(() => PauseModeManager.Instance.pauseMode == PauseMode.Unpaused);
+
         StartCoroutine(onTriggerEvent.Run());
 
         yield return new WaitUntil(() => !onTriggerEvent.isRunning);

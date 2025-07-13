@@ -18,6 +18,9 @@ public class Interactable : MonoBehaviour
 
     public void Click()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
+        if (PauseModeManager.Instance.pauseMode != PauseMode.Unpaused) { return; }
+
         OnClicked();
     }
 

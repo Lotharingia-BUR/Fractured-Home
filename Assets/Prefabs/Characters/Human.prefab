@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  accelerationTime: 0.4
+  accelerationTime: 0.6
   nodeReachedDistance: 0.05
 --- !u!50 &400632827811915503
 Rigidbody2D:
