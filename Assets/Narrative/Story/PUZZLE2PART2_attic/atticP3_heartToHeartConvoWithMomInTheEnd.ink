@@ -40,7 +40,7 @@ Casper: 'Just as important as how communicating ensures everyone's needs are hea
 
 Casper: 'Because communication, like many things, goes both ways. You can't expect someone to listen to you if you're not willing to give your attention and understanding to them in turn.'
 
-Mother and son stand in silence for a breath, shifting uncomfortable as they do so. Dylan's mother attempts to speak first, but her words seem to wither behind her lips.
+Mother and son stand in silence for a breath, shifting uncomfortably as they do so. Dylan's mother attempts to speak first, but her words seem to wither behind her lips.
 
 Dylan: "I'm sorry you died. I came here today because my foster mom thought it would be a good idea for me to find some closure since I left so fast."
 
