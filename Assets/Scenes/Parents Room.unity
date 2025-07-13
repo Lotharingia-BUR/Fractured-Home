@@ -1772,7 +1772,7 @@ MonoBehaviour:
     events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 137462158}
+        - m_Target: {fileID: 741344670}
           m_TargetAssemblyTypeName: ManagerInterface, Assembly-CSharp
           m_MethodName: SetDialogue
           m_Mode: 2
@@ -2402,7 +2402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 844099953637691264, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1829627568376423627, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_Name
@@ -2514,7 +2514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7136000552329852607, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7287215976178013830, guid: 0b1921b76afbb3c4eaae40cb60385346, type: 3}
       propertyPath: m_AnchorMax.y
