@@ -13,6 +13,8 @@ public class CreditsController : MonoBehaviour
 
     private float _t;
 
+    private float _fadeInTimer = 0.5f;
+
     void Start()
     {
         if (DialogueManager.Instance != null)
@@ -25,13 +27,14 @@ public class CreditsController : MonoBehaviour
         }
     }
 
-    private void ClearManagers()
-    {
-
-    }
-
     void Update()
     {
+        if (_fadeInTimer > 0f)
+        {
+            _fadeInTimer -= Time.deltaTime;
+            return;
+        }
+
         creditsCamera.transform.position = Vector3.Lerp(startPosition, endPosition, movementCurve.Evaluate(_t));
 
         _t += Time.deltaTime / scrollDuration;
