@@ -195,8 +195,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1563854f41aafdc45b29b31f530fa327, type: 3}
-  m_Resource: {fileID: 8300000, guid: 1563854f41aafdc45b29b31f530fa327, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1da4710cfb1dd1445b9cf1f2d0d79024, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1da4710cfb1dd1445b9cf1f2d0d79024, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.8
   m_Pitch: 1
@@ -875,14 +875,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
+      time: 0.00062303804
+      value: 0.00075377943
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.033777684
+      value: 0.0064624324
+      inSlope: 0.23091651
+      outSlope: 0.23091651
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.12517232
+    - serializedVersion: 3
+      time: 0.8992582
+      value: 1.0004666
+      inSlope: -0.0025768687
+      outSlope: -0.0025768687
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
     - serializedVersion: 3
       time: 1
       value: 1
@@ -895,7 +913,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  scrollDuration: 10
+  scrollDuration: 30
   creditsCamera: {fileID: 1297245300}
   startPosition: {x: 0, y: 26.5, z: 10}
   endPosition: {x: 0, y: 3, z: 10}
