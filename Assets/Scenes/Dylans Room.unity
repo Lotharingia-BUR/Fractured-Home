@@ -7250,7 +7250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1411863529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7345,7 +7345,21 @@ MonoBehaviour:
   casperDestinationNode: {fileID: 1034000437}
   itemKey: {fileID: 0}
   onUnlockedEvent:
-    events: []
+    events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1411863531}
+          m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+          m_MethodName: DestroyPNCObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1411863531}
+            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   onInteractUnlockedEvent:
     events: []
 --- !u!1 &1419109673
@@ -8769,13 +8783,13 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1411863528}
+        - m_Target: {fileID: 1411863531}
           m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
-          m_MethodName: DestroyPNCObject
-          m_Mode: 2
+          m_MethodName: Unlock
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1411863531}
-            m_ObjectArgumentAssemblyTypeName: PointAndClickObject, Assembly-CSharp
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 1
             m_StringArgument: 
@@ -8783,7 +8797,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1674591394}
+        - m_Target: {fileID: 1674591397}
           m_TargetAssemblyTypeName: PointAndClickObject, Assembly-CSharp
           m_MethodName: DestroyPNCObject
           m_Mode: 2
