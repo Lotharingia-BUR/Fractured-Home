@@ -1,6 +1,6 @@
 //player finds the batteries
 
-Dylan: "Oh! Here's the batteries! Let's hope they work."
+Dylan: "Oh! Here is a battery, I hope theres still some juice left in it?
 
 
 
