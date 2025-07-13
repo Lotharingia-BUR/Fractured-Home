@@ -4,7 +4,7 @@ Dylan: "Okay. I have the permission slip now. Here goes..."
 
 Dylan: "Mom, Dad. I know you're really busy, but I have field trip to the museum coming up, and I need one of you to sign this permission slip so I can go. Can you please help me?"
 
-The ghosts' arguing comes to a sudden halt. They turn slowly to face Dylan to see the permission slip in his outstretched hands and his eagre face.
+The ghosts' arguing comes to a sudden halt. They turn slowly to face Dylan to see the permission slip in his outstretched hands and his eager face.
 
 Dylan's mother: "That's..."
 
