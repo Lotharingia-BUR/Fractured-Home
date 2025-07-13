@@ -10842,7 +10842,7 @@ MonoBehaviour:
           m_MethodName: SetDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4900000, guid: 53cb38be1e459384c9e49df265c9f6a1, type: 3}
+            m_ObjectArgument: {fileID: 4900000, guid: ed3e2a598f7762048aff2cb4c6dc2f13, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -13002,7 +13002,7 @@ MonoBehaviour:
           m_MethodName: PlayOneShot
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: e2d82283a0d24934dbd59db2f70ff87f, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 1b9defdcf0157f244a69423c5ee98ea4, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -20063,7 +20063,7 @@ PrefabInstance:
     - target: {fileID: 7376147344061378321, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: onInteractedEvent.events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 8f8176a6dac4c894b8eaa06c1e640341, type: 3}
+      objectReference: {fileID: 8300000, guid: a82be635970267741a9fc4eac376f0bd, type: 3}
     - target: {fileID: 7376147344061378321, guid: c302e16cfe1ab5e4a82cb45deb2c9b45, type: 3}
       propertyPath: onInteractedEvent.events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.AudioClip, UnityEngine
