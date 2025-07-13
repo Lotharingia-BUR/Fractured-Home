@@ -1,7 +1,7 @@
-Some old stories you havent heard in a long time
+Some old stories Dylan hadn't heard in a while.
 
-Dylan: "My dad would read me these before I would go to bed"
+Dylan: "Dad used to read these to me before I went to bed."
 
-A dinosaur enclyopedia book lies to the left, you remember memorizing all their names
+A dinosaur enclyopedia lies to the left, weathered and well-loved. Dylan cracks a smile, he doesn't need to reopen the book to know every dinosaur detailed within.
 
     -> END

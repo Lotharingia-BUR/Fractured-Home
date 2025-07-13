@@ -1,3 +1,3 @@
-A poster of a T-Rex, it was your favourite dinosaur growing up
+A poster of a T-Rex, Dylan's first-favourite dinosaur.
 
     -> END

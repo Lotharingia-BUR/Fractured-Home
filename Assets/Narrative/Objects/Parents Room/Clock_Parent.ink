@@ -1,4 +1,4 @@
-The clock reads 4:00am
+The clock reads 4:00am.
 
 
     -> END

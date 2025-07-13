@@ -1,3 +1,3 @@
-Dylan: "Its my moms old laptop she gave to me to help with homework, I wasnt allowed to take it with me" 
+Dylan: "I can't believe this is still here! Mom's old laptop, I used to borrow it to do homework." 
 
     -> END

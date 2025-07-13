@@ -1,7 +1,7 @@
-You open the fridge and get a whiff of something rancid
+Dylan pulls open the fridge, and gets hit by a wave of rancid stench.
 
-Dylan: "UEWGHHHHH is that a dead rat"
+Dylan: "UEWGHHHHHHHHHHHHH is that a dead rat?!!"
 
-Casper: 'Yum!"
+Casper: 'Yum!'
 
     -> END
